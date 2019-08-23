@@ -1,0 +1,640 @@
+{
+  "content": [
+    {
+      "id": "1",
+      "content_type": "Case Study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "solutions": "digital consulting,customer journey mapping,mobile app poc",
+      "image": "http://localhost:5000/static/logo/logo_mcdonalds.png",
+	  "file": "http://localhost:5000/static/logo/file_mcdonalds.pdf",
+      "keywords": [
+        "design thinking",
+        "workshops",
+        "digital assessment",
+        "customer journey mapping",
+        "supply chain optimization",
+        "mobility",
+        "mobile app poc",
+        "qsr",
+        "quick service restaurant",
+        "mcdonalds",
+        "united states of america",
+        "us",
+        "value chain analysis",
+        "digital transformation",
+        "supply chain transformation",
+        "customer experience improvement"
+      ],
+      "title": "Helping a large US quick service restaurant improve customer experience and operational efficiency",
+      "content": "A large US based quick service wanted Quinnox to help them transform their Quick Service Restaurant (QSR) experience to improve sales and add value across their value chain. Quinnox undertook a study of the customer ecosystem and the QSR value network. As an outcome of this consulting engagement we presented the necessary customer experience interventions to help meet the goals for the customer, restaurant & franchisee and distribution centers. The outcome translated into a number of business process changes across the supply chain to improve fulfillment as well as the introduction of some new group ordering features on the brands mobile app for better ordering experience and increase in revenue."
+    },
+    {
+      "id": "2",
+      "content_type": "Case Study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_oic.png",
+	  "file": "http://localhost:5000/static/logo/file_oic.pdf",
+      "solutions": "design thinking workshop to advise on improving field agent experience and provide a customer 360 view to the business",
+      "keywords": [
+        "agent experience",
+        "fleet on street",
+        "fos",
+        "field force automation",
+        "customer 360",
+        "unified view of customer",
+        "agent handover",
+        "digitally processing insurance claims",
+        "claim processing visibility for customer"
+      ],
+      "title": "Transforming the Insurance buying and claims experience for purchasers and field staff for a large Insurance company in the middle east",
+      "content": "A large Insurance company in the middle east wanted to transform the customer experience for its insurance buyers as well as streamline processes for its agents to help them have a unified view of their customers. The Quinnox customer experience team undertook a study of the customer ecosystem and created buyer and agent personas and presented its recommendations on how to have an omni-channel experience to make it easy for new and existing customers to buy and manage their policies and claims in a quick, easy and seamless manner while trying to help improve customer intelligence for the agents to have a 360 view of their customers. The outcome translated into business process and service design changes along with strong integration and mobile solutions to help the customer improve the claims experience for their customers and improve operational efficiency for their field force."
+    },
+    {
+      "id": "3",
+      "content_type": "Case Study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_comed.png",
+	  "file": "http://localhost:5000/static/logo/file_comed.pdf",
+      "solutions": [
+        "digital consulting",
+        "customer journey mapping",
+        "cloud based field force",
+        "mobile application"
+      ],
+      "keywords": [
+        "digital consulting workshop",
+        "customer research",
+        "power distribution and utilities",
+        "customer journey mapping",
+        "field force automation",
+        "contractor management",
+        "relief and rescue operations",
+        "storm restoration",
+        "hurricane monitoring and damage assessment",
+        "cloud and mobile app",
+        "comed",
+        "commonwealth edison",
+        "exelon",
+        "america",
+        "north america",
+        "chicago",
+        "united states of america",
+        "us",
+        "digital transformation of power distribution and utilities",
+        "reduce storm restoration expenses",
+        "customer experience improvement during a storm and hurricane"
+      ],
+      "title": "Reducing storm restoration costs and improving customer experience for one of north america large power distribution and utilities company",
+      "content": "Quinnox helped one of north america largest power distribution and utilities company reduce their storm restoration costs which were spiralling year on year and also helped them digitalize their manual processes to manage a huge contract restoration workforce through efficient mobile and cloud based solutions. the outcome was more real-time insights to the end users both residential and commercial customers, storm restoration crew and ability to easily assess, record and report restoration progress and help the right restoration teams with the right equipment reach the affected areas in the most optimum time. the solution also helped the customer realise revenues otherwise lost when they restored services for other ancillary service providers using their infrastructure. this led to plugging revenue leaks and improving overall storm restoration costs and customer experience"
+    },
+    {
+      "id": "4",
+      "content_type": "Case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_firmenich.png",
+	  "file": "http://localhost:5000/static/logo/file_firmenich.pdf",
+      "solutions": [
+        "digital consulting",
+        "customer journey mapping",
+        "conversational interface solution over messenger and alexa"
+      ],
+      "keywords": [
+        "digital consulting",
+        "design thinking workshops",
+        "digital assessment",
+        "customer journey mapping",
+        "back office automation",
+        "chatbot",
+        "conversational interface",
+        "firmenich",
+        "switzerland ",
+        "fragrance and flavour business ",
+        "flavor ",
+        "digital transformation for back office ",
+        "customer experience improvement "
+      ],
+      "title": "Leveraging conversational interfaces to help perfume scientists and flavourists with their formulation processes",
+      "content": "Quinnox engaged with the world second largest fragrance and flavour company to leverage conversational interfaces as a tool to guide the formulation activities for perfume scientists and flavourists. this was to ease the dependency on multiple legacy based apps that were required to be referenced during a formulation process. quinnox demonstrated the efficacy of a conversational interface using nlp and chatbots as well as voice based interfaces like alexa and google home to drive digital transformation for their back office experts. the outcome was a clear shift in the way of working resulting in operational efficiencies and revenues for the fragrance and flavour business of the customer."
+    },
+    {
+      "id": "5",
+      "content_type": "Case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_firmenich.png",
+	  "file": "http://localhost:5000/static/logo/file_firmenich.pdf",
+      "solutions": [
+        "customer experience and human factors assessment",
+        "customer journey mapping",
+        "web and mobile user experience design"
+      ],
+      "keywords": [
+        "customer experience assessment",
+        "customer research",
+        "customer journey mapping",
+        "user personas",
+        "back office automation",
+        "machine learning",
+        "analytics",
+        "firmenich",
+        "switzerland",
+        "fragrance and flavour business",
+        "flavor",
+        "digital transformation for back office",
+        "customer experience improvement"
+      ],
+      "title": "User experience transformation of legacy based formulation applications to improve human factors and transform back office operations",
+      "content": "Quinnox engaged with the world second largest fragrance and flavour company to study its legacy application landscape from a user experience and human factors perspective. quinnox undertook a study of the domain, the user task flows and business processes and studied the users behaviour with existing systems. the new user experience design built on human factors and usability seeks to help business users create novel formulations by reducing chances of duplications at a very early stage using principles of machine learning and ai. the outcome resulted in reduced losses due to duplications, increase in novel formulations, higher revenues and higher compliance."
+    },
+    {
+      "id": "6",
+      "content_type": "Case study",
+      "categories": [
+        "employee engagement",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_gsf.png",
+	  "file": "http://localhost:5000/static/logo/file_gsf.pdf",
+      "solutions": [
+        "customer experience assessment and consulting",
+        "customer journey mapping",
+        "cloud based humanized conversational interface poc"
+      ],
+      "keywords": [
+        "customer experience assessment",
+        "customer research",
+        "waste management",
+        "customer journey mapping",
+        "employee engagement",
+        "third party integration services",
+        "machine learning",
+        "artificial intelligence",
+        "ai",
+        "united states of america",
+        "us",
+        "america",
+        "digital transformation of environmental solutions company",
+        "improve compliance",
+        "enterprise portals",
+        "digital transformation of the enterprise intranet",
+        "customer experience improvement for employee engagement and workforce transformation "
+      ],
+      "title": "Transforming the enterprise intranet for one of the largest integrated environmental solutions company in the united states",
+      "content": "The customer experience team at quinnox has closely worked with the business users of one of america largest integrated environmental solutions company in leveraging conversational interfaces to replace their traditional non-engaging intranets. the team did a consulting engagement to demonstrate hyper personalisation for enterprise users to improve engagement and meet both business and employee goals. this demonstration on workforce transformation using nlp based conversational interfaces driven by machine learning have created a renewed interest across the company users and senior leadership for whom workforce engagement and transformation is a key kpi."
+    },
+    {
+      "id": "7",
+      "content_type": "case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_efl.png",
+	  "file": "http://localhost:5000/static/logo/file_efl.pdf",
+      "solutions": [
+        "digital consulting workshop",
+        "customer journey mapping",
+        "iot and gamified fleet on street mobile application"
+      ],
+      "keywords": [
+        "digital consulting",
+        "customer experience assessment",
+        "customer research",
+        "customer journey mapping",
+        "user personas",
+        "back office automation",
+        "internet of things",
+        "iot",
+        "analytics",
+        "eureka forbes",
+        "india",
+        "water purification, health and hygiene",
+        "digital transformation for back office automation",
+        "field force automation",
+        "customer experience improvement "
+      ],
+      "title": "Digitally transforming the field force experience using gamified mobile applications for india largest fmcg company",
+      "content": "India large consumer goods company in the water purification, health and hygiene solutions for home and corporate users was struggling with automating their fleet on street processes to gain improved insights on their field force and reduce the tat for their end customers. the customer also wanted the field force to be empowered with unified view of the customers for a more personalized experience from a service and support perspective as well as to help upsell and cross sell relevant products. quinnox conducted a user research, field study and a design thinking workshop to understand the challenges, motivations and drivers for the field force and came up with a gamified mobile solution to help essentialize the app for the field force to increase adoption as well drive motivation using principles of gamification. the outcome was greater insights on field force for business with an easy way for fleet on street to engage with business as well as end customers using minimum data entry on the mobile app as well as drive compliance and improve customer satisfaction. this also helped increase revenue with more upsell and cross sell opportunities for the field staff."
+    },
+    {
+      "id": "8",
+      "content_type": "case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_missionhealth.png",
+	  "file": "http://localhost:5000/static/logo/file_missionhealth.pdf",
+      "solutions": [
+        "customer journey mapping",
+        "web and mobile user experience design"
+      ],
+      "keywords": [
+        "customer research",
+        "customer journey mapping",
+        "user personas",
+        "back office automation",
+        "machine learning",
+        "analytics",
+        "mission health hospitals",
+        "north carolina",
+        "healthcare",
+        "digital transformation for back office",
+        "customer experience improvement "
+      ],
+      "title": "Digitally transforming patient care experiences for one of america largest healthcare providers",
+      "content": "Quinnox engaged with one of north carolina largest healthcare service provider to improve their operational efficiency and help them deliver affordable patient care. quinnox worked with the business leaders to understand the existing business processes and application landscape. with the aim of rationalising their applications and introducing innovative mobile and wearable solutions to transform the way patients consume health care services in a more proactive manner, quinnox worked with the customer to bring about this digital shift for their hospital operations and patient care applications. the outcome resulted in optimal scheduling of staff duties, more visibility of patients through mobile and wearable data proactively feeding the profiles of patients seeking better and affordable patient care"
+    },
+    {
+      "id": "9",
+      "content_type": "Case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_firmenich.png",
+	  "file": "http://localhost:5000/static/logo/file_firmenich.pdf",
+      "solutions": [
+        "field study and internet of things (iot) solution framework"
+      ],
+      "keywords": [
+        "user workshops",
+        "internet of things",
+        "iot",
+        "field study",
+        "farmer interviews",
+        "analytics",
+        "borewells",
+        "india",
+        "water sustainability",
+        "farmer experiences",
+        "digital transformation for farm to fork",
+        "firmenich"
+      ],
+      "title": "Transforming farmer experiences using iot and cloud solutions for food and water sustainability",
+      "content": "Quinnox engaged with the world second largest fragrance and flavour company to address the problem of raw material sustainability for one of their key fragrance products having a geographical indicator in south india. quinnox undertook a field study to understand the farm operations and the water availability problems in the farm borewells. quinnox presented a solution framework to help the customer leverage iot and sensors to measure water availability and its utilization by the farmers from their bore wells. this data would then be made available to the customer to understand water availability and utilization patterns, rainfall and other weather indicators that contribute to ground water recharges and provide farmers with insights to undertake crop rotations as per water availability thereby maximize farmers earnings while ensuring sustainability of the produce of raw materials. the outcome resulted in digitalizing the bore wells for monitoring water availability and its usage to maximize sustainability, increase yield and improve farmer experiences."
+    },
+    {
+      "id": "10",
+      "content_type": "Case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_midtronics.png",
+	  "file": "http://localhost:5000/static/logo/file_midtronics.pdf",
+      "solutions": [
+        "user experience for web and mobile application for improving dealer experience with strong reporting and analytics features"
+      ],
+      "keywords": [
+        "bmis",
+        "battery management information system",
+        "midtronics",
+        "dealer automation",
+        "automotive business",
+        "mobility solution, mobile applications "
+      ],
+      "title": "Helping one of chicago most innovative companies take their battery management information system (bmis) and stationary power infra to the cloud",
+      "content": "A case of one of the world leaders in battery management seeking to move to a cloud-based solution, with multi-geo accessibility and upgradable and scalable solution. quinnox helped create new value in predictive maintenance through actionable analytics, customer service, battery management, lot management, pre-delivery inspection and warranty maintenance, all this on a web and mobile responsive interface hosted on cloud with strong analytics and reporting features built in."
+    },
+    {
+      "id": "11",
+      "content_type": "Case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_bestbuy.png",
+	  "file": "http://localhost:5000/static/logo/file_bestbuy.pdf",
+      "solutions": [
+        "digital catalogs",
+        "price comparators",
+        "user experience on android mobile applications",
+        "in-store fleet applications"
+      ],
+      "keywords": [
+        "user experience design",
+        "android application development",
+        "bestbuy",
+        "web and mobile applications",
+        "kiosk applications",
+        "digital catalogs",
+        "price comparison solutions",
+        "united states",
+        "retail",
+        "consumer electronics",
+        "back office digitalization",
+        "automation"
+      ],
+      "title": "Creating omni-channel shopping experiences for a large american multinational consumer electronics retailer",
+      "content": "A case of an american multinational consumer electronics corporation seeking a solution for seamless omni-channel shopping experience. quinnox crafted a mobile solution where they can track real-time inventory across all stocking points and enhance in-store online ordering. with features like real time updated product catalogue, price comparators, barcode scanning and gps with centralized monitoring system, quinnox helped them in their digital transformation initiatives to create a new value in their overall operational process. the outcome was an enhanced in-store shopping experience coupled with increase in revenue."
+    },
+    {
+      "id": "12",
+      "content_type": "case study",
+      "image": "http://localhost:5000/static/logo/logo_wm.png",
+	  "file": "http://localhost:5000/static/logo/file_wm.pdf",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "solutions": [
+        "driver mobile and web applications",
+        "route optimization solutions",
+        "alexa based voice conversational solution"
+      ],
+      "keywords": [
+        "user workshops",
+        "customer journey mapping",
+        "field force automation",
+        "driver automation solutions",
+        "route optimisation solutions",
+        "driver mobile apps",
+        "alexa based voice conversational interface"
+      ],
+      "title": "Fleet and route optimisation solutions for america largest integrated environmental solutions company",
+      "content": "A case of one of the leading provider of integrated environmental solutions where quinnox helped re-imagine their existing operations and create new value out of it by re-imagining operations like route optimisation, fleet operation optimization to maximize resource utilization, dynamic dispatching, mobile communication and real-time asset tracking for efficient supply chain operations. all this backed with solid reporting and insights. the outcome was seen in reduced number of customer support calls and queries, increased turnaround time and real-time visibility into day to day field operations thereby improving operational efficiency."
+    },
+    {
+      "id": "13",
+      "content_type": "case study",
+      "image": "http://localhost:5000/static/logo/logo_vf.png",
+	  "file": "http://localhost:5000/static/logo/file_vf.pdf",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "solutions": [
+        "sql server reporting solutions",
+        "ibm cognos 10 report studio"
+      ],
+      "keywords": [
+        "support and maintenance",
+        "reporting solutions",
+        "ibm cognos",
+        "sql server reporting service (ssrs 2008 r2)",
+        " vanity fair corporation",
+        "vf",
+        "vfc",
+        "united states",
+        "apparel",
+        "branded lifestyle apparel",
+        "footwear"
+      ],
+      "title": "Business reporting solutions for a global leader in branded lifestyle apparel, footwear and accessories",
+      "content": "A case of one of north carolina based global lifestyle apparel company where quinnox helped them in creating new reports for their business decisions using sql server reporting service (ssrs 2008 r2) and ibm cognos 10 report studio and also provided support and maintenance for the same. the outcome translated into improved operational efficiencies for the business."
+    },
+    {
+      "id": "14",
+      "content_type": "case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_datu.png",
+	  "file": "http://localhost:5000/static/logo/file_datu.pdf",
+      "solutions": [
+        "created a cloud based digital platform for connecting healthcare providers with patients and their wearables and by leveraging big data and analytics"
+      ],
+      "keywords": [
+        "digital healthcare platform",
+        "wearables",
+        "big data",
+        "analytics",
+        "proactive healthcare",
+        "patient experience",
+        "customer experience",
+        "cloud",
+        "operational efficiency",
+        "healthcare experiences"
+      ],
+      "title": "Developed a digital healthcare platform for a us based tech firm focused on providing cloud based user-focused health systems",
+      "content": "A case in health care where patients and clinicians can come together to deliver on healthcare outcomes and enhance patient experience by using wearable devices that can gather real-time insights from patients and allow clinicians track health and provide proactive diagnosis. quinnox built the digital healthcare platform that leverages big data to allow for proactive and personalized healthcare outcomes for patients. the cloud based solution leverages historical patient data to lower the cost of delivering personalized health care thereby creating a compelling case for health care service providers and patients alike."
+    },
+    {
+      "id": "15",
+      "content_type": "case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_firmenich.png",
+	  "image": "http://localhost:5000/static/logo/file_firmenich.pdf",
+      "solutions": [
+        "digital consulting workshop",
+        "customer journey mapping",
+        "ux design for brief management poc"
+      ],
+      "keywords": [
+        "brief management",
+        "flavor and fragrance",
+        "formulations",
+        "firmenich",
+        "switzerland",
+        "digital transformation",
+        "customer experience transformation",
+        "web and mobile application",
+        "cloud",
+        "machine learning",
+        "ai",
+        "artificial intelligence"
+      ],
+      "title": "Digitally disrupted the ‘brief management process’ for the world second largest fragrance and flavor company",
+      "content": "A case of one of the world second largest fragrance & flavor company which used conventional methods to gather briefs for their fragrances and flavors that took more time and was not intuitive. quinnox disrupted the brief gathering process by making it intuitive and added a touch of diy to the customers who could now easily specify their briefs for the formulations the desired for their fragrances and flavors. this solution was more visual backed by machine learning and big data that gave the business a better understanding their customer personas. it provided valuable insights by abstracting the complexities of chemical formulations with a do-it-yourself kind of intuitive interface to be able to give more accurate chemical composition. the in-depth analysis of the brief is done considering various parameters and trends according to the market to give new value to the business and the end customer. the outcome was an enhanced brief gathering experience resulting in faster brief capture times and improved operational efficiency for the formulations functions."
+    },
+    {
+      "id": "16",
+      "content_type": "case study",
+      "categories": [
+        "operational efficiency"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_dhl.png",
+	  "file": "http://localhost:5000/static/logo/file_dhl.pdf",
+      "solutions": [
+        "web and mobile application solutions",
+        "cloud",
+        "gst compliance solution"
+      ],
+      "keywords": [
+        "support and maintenance",
+        "gst solutions",
+        "dhl",
+        "logistics",
+        "improved operational efficiency"
+      ],
+      "title": "Helped a global market leader in the logistics industry improve its operational efficiency and regional compliance",
+      "content": "Quinnox enabled a global market leader in the logistics industry improve time to market and helped with gst and custom regulation compliance to help the customer improve operational efficiency. quinnox developed and supported secure code standards with faster ramp-ups to fulfil ad-hoc requests to ensure faster time to market. the outcome was seen in terms of improved operational efficiency with increased compliance to gst and custom regulations."
+    },
+    {
+      "id": "17",
+      "content_type": "case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_mahyco.png",
+	  "image": "http://localhost:5000/static/logo/file_mahyco.pdf",
+      "solutions": [
+        "internet of things solutions framework",
+        "image recognition using machine learning poc"
+      ],
+      "keywords": [
+        "image recognition",
+        "machine learning",
+        "ai",
+        "artificial intelligence",
+        "internet of things",
+        "iot",
+        "crop yield prediction",
+        "digital agriculture",
+        "precision farming",
+        "farm to form",
+        "f2f",
+        "india"
+      ],
+      "title": "Leveraging IoT and machine learning to predict yield for one of india largest hybrid seeds company",
+      "content": "A case of one of india major hybrid seed producing company seeking a digital agriculture solution to enable early prediction of yield for their crops to help them right size their future warehousing and logistical requirements and business decision planning. quinnox leveraged iot and its own insights platform backed by machine learning to get approximate yield by capturing various parameters from the different kinds of sensors placed in the farms and provided recommendations based on the real-time climate conditions so that yield can be measured effectively at appropriate stages of crop growth."
+    },
+    {
+      "id": "18",
+      "content_type": "case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience",
+        "employee engagement"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_basf.png",
+	  "file": "http://localhost:5000/static/logo/file_basf.pdf",
+      "solutions": "humanized conversational interface platform – phase 1",
+      "keywords": [
+        "nlp",
+        "conversational interfaces",
+        "intranet",
+        "enterprise portals",
+        "employee engagement",
+        "basf",
+        "customer experience ip",
+        "machine learning",
+        "personalisation",
+        "ai",
+        "artificial intelligence",
+        "integration",
+        "cloud"
+      ],
+      "title": "Improving employee engagement using nlp based conversational interfaces for a large global producer and marketer of chemical and related products",
+      "content": "A case of one of the largest chemical producer where quinnox helped them re-imagine their enterprise portals including their enterprise intranets by introducing nlp based smart conversational interface platform. the solution seamlessly integrates with in-house enterprise and third party systems and has opened an altogether new channel for their b2e transactions, improving employee engagement by introducing hyper personalization driven by intelligent conversational interfaces and machine learning. the outcome resulted in improved employee engagement, improved operational efficiency and addition of new b2b, b2c and b2e use cases."
+    },
+    {
+      "id": "19",
+      "content_type": "case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_aeropostale.png",
+	  "file": "http://localhost:5000/static/logo/file_aeropostale.pdf",
+      "solutions": "digital consulting,mobile inventory management solution,rapid prototyping",
+      "keywords": [
+        "inventory management",
+        "supply chain",
+        "in store operations",
+        "in store app",
+        "mobile inventory management",
+        "aeropostale",
+        "mall based apparel retailer",
+        "speciality retail",
+        "speciality retailer",
+        "apparel and accessories fashion",
+        "fashion merchandise",
+        "mobile inventory management",
+        "verifone paware",
+        "ir scanner",
+        "point of sale",
+        "pos",
+        "airprint"
+      ],
+      "title": "Quinnox develops Mobile Inventory Management application for a mall-based specialty retailer of casual apparel and accessories in a short time frame of 10 weeks",
+      "content": "Quinnox engaged with the Mall-based specialty retailer of casual apparel and accessories that provides customers with a focused selection of high-quality, fashion and fashion basic merchandise at compelling values. The objective was to mobilize the inventory management process in stores so that sales team could do stock in and stock out on the shop floor and attend the customer at the same time.\r<br>The team assessed and analyzed the existing Inventory Management system, the gaps and issues. Quinnox set up an Offshore team for Ideation / wireframes designs, rapid prototyping and development. Customized the Quinnox Q-IMS solution architecture to develop the Mobile Inventory Management application. Extended the existing inventory system functionalities to mobile devices. Designed and integrated the application with back-end Point of Sales (POS) databases such as:<br> > Verifone Payware IR scanner for scanning bar codes <br> > AirPrint for printing shipping labels and document shipment manifests"
+    },
+    {
+      "id": "20",
+      "content_type": "case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_bestbuy.png",
+	  "file": "http://localhost:5000/static/logo/file_bestbuy.pdf",
+      "solutions": "in store sales app, task management app",
+      "keywords": [
+        "in store apps",
+        "sales associate apps",
+        "in store operations",
+        "product catlog",
+        "price comparison",
+        "innovation labs",
+        "bestbuy sami application",
+        "simple access mobile inventory",
+        "omni-channel",
+        "omnichannel",
+        "showrooming",
+        "price comparator",
+        "price matching",
+        "product catalog",
+        "product catalogue",
+        "barcode scanning",
+        "gps",
+        "camera feeds",
+        "innvoation lab"
+      ],
+      "title": "Quinnox award winning Omni-Channel solution enhances inventory visibility and availability for a multinational consumers electronics corporation",
+      "content": "Quinnox engaged with a US based consumer electronics chain to digitalize the store operations. The customer was having showrooming challenges competing with online sites with regard to price. The customer created a renewed strategy which included empowering sales and innovate store experience.<br>Quinnox team has set up a Mobile Development Innovation Factory for Ideation / wireframes designs, prototyping and development. Integrated the mobile solution with the existing ERP system to ensure that the sales associate is empowered to help the customer.<br> The following features were made available in the application <br> > Real-time inventory visibility across all stocking points <br> > In-store online ordering (store representative-assisted) with direct-to-consumer shipping or pick up from another store > <br> Real time updated product catalog <br> > Price Comparisons <br> > Online task manager and to-do list tool <br> > Integrated the solution with the latest mobile technology features like barcode scanning, GPS (for store locations with inventory) and Camera feeds (for task scheduling) <br> > Implemented a centralized monitoring system"
+    },
+    {
+      "id": "21",
+      "content_type": "case study",
+      "categories": [
+        "operational efficiency",
+        "customer experience"
+      ],
+      "image": "http://localhost:5000/static/logo/logo_bestbuy.png",
+	  "file": "http://localhost:5000/static/logo/file_bestbuy.pdf",
+      "solutions": "in store sales app, task management app",
+      "keywords": [
+        "delivery apps",
+        "epod",
+        "apps for logistics",
+        "quiality custom distribution",
+        "golden state foods",
+        "gsf",
+        "qcd",
+        "delivery management system",
+        "america",
+        "north america",
+        "delivery management",
+        "logistics transformation",
+        "digitization",
+        "last mile automation",
+        "digital invoicing",
+        "routing",
+        "driver apps"
+      ],
+      "title": "Quinnox created a solution for logistics industry that worked as an electronic proof of delivery",
+      "content": "Quinnox engaged with one for large Food logistics company in North America. The challenge was that the deliveries were managed manually. The driver spent lot of time in Pre and post-delivery for documentation and during the delivery. <br> The ePod application used by the driver enables him/her to get the entire delivery end to end process on a mobile handheld device. <br> This is a business critical application covering the end to end Delivery Management System and integrated with the client internal systems. <br> Major business functions covered by the app: <br>  > View real time delivery, status, time, information etc. <br> > Assists driver with routes, traffic  and parking information <br> > Allow scanning of pallets/cases to update the records and also display Case and Pallet level information. <br> > Generate, update and print invoices and other delivery documents digitally on the handheld device. <br> > Improve driver experience Improve operational  efficiencies. <br> > Benefits of the app <br> > Eliminate delivery paperwork and the associated costs <br> > Digital invoice generation and Proof of Delivery (signature & captured document images) <br> > Assists driver with routes, traffic  and parking information"
+    }
+  ]
+}

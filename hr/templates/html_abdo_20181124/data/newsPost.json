@@ -1,0 +1,59 @@
+{
+    "navList": [{
+        "time": "2 hours ago",
+        "date": "September 16, 2018",
+        "imagePath":"/static/images/imgPost1.jpg",
+        "postHeader":"BASF and NMMC collaborate on safe water and sanitation project in Navi Mumbai",
+        "postContent":"Over 10,000 citizens from Turbhe Store, a suburb of Navi Mumbai, will now have access to clean and affordable drinking water through the \"Landmark Project\", a water and sanitation initiative by BASF, with the support of Navi Mumbai Municipal Corporation (NMMC)."
+    },
+    {
+        "time": "4 hours ago",
+        "date": "September 16, 2018",
+        "imagePath":"/static/images/imgPost2.jpg",
+        "postHeader":"BASF and NMMC collaborate on safe water and sanitation project in Navi Mumbai",
+        "postContent":"Over 10,000 citizens from Turbhe Store, a suburb of Navi Mumbai, will now have access to clean and affordable drinking water through the \"Landmark Project\", a water and sanitation initiative by BASF, with the support of Navi Mumbai Municipal Corporation (NMMC)."
+    },
+    {
+        "time": "6 hours ago",
+        "date": "September 16, 2018",
+        "imagePath":"/static/images/imgPost3.jpg",
+        "postHeader":"BASF and NMMC collaborate on safe water and sanitation project in Navi Mumbai",
+        "postContent":"Over 10,000 citizens from Turbhe Store, a suburb of Navi Mumbai, will now have access to clean and affordable drinking water through the \"Landmark Project\", a water and sanitation initiative by BASF, with the support of Navi Mumbai Municipal Corporation (NMMC)."
+    },
+    {
+        "time": "7 hours ago",
+        "date": "September 16, 2018",
+        "imagePath":"/static/images/imgPost1.jpg",
+        "postHeader":"BASF and NMMC collaborate on safe water and sanitation project in Navi Mumbai",
+        "postContent":"Over 10,000 citizens from Turbhe Store, a suburb of Navi Mumbai, will now have access to clean and affordable drinking water through the \"Landmark Project\", a water and sanitation initiative by BASF, with the support of Navi Mumbai Municipal Corporation (NMMC)."
+    },
+    {
+        "time": "8 hours ago",
+        "date": "September 16, 2018",
+        "imagePath":"/static/images/imgPost2.jpg",
+        "postHeader":"BASF and NMMC collaborate on safe water and sanitation project in Navi Mumbai",
+        "postContent":"Over 10,000 citizens from Turbhe Store, a suburb of Navi Mumbai, will now have access to clean and affordable drinking water through the \"Landmark Project\", a water and sanitation initiative by BASF, with the support of Navi Mumbai Municipal Corporation (NMMC)."
+    },
+    {
+        "time": "9 hours ago",
+        "date": "September 16, 2018",
+        "imagePath":"/static/images/imgPost3.jpg",
+        "postHeader":"BASF and NMMC collaborate on safe water and sanitation project in Navi Mumbai",
+        "postContent":"Over 10,000 citizens from Turbhe Store, a suburb of Navi Mumbai, will now have access to clean and affordable drinking water through the \"Landmark Project\", a water and sanitation initiative by BASF, with the support of Navi Mumbai Municipal Corporation (NMMC)."
+    },
+    {
+        "time": "10 hours ago",
+        "date": "September 16, 2018",
+        "imagePath":"/static/images/imgPost1.jpg",
+        "postHeader":"BASF and NMMC collaborate on safe water and sanitation project in Navi Mumbai",
+        "postContent":"Over 10,000 citizens from Turbhe Store, a suburb of Navi Mumbai, will now have access to clean and affordable drinking water through the \"Landmark Project\", a water and sanitation initiative by BASF, with the support of Navi Mumbai Municipal Corporation (NMMC)."
+    },
+    {
+        "time": "2 days ago",
+        "date": "September 14, 2018",
+        "imagePath":"/static/images/imgPost2.jpg",
+        "postHeader":"BASF and NMMC collaborate on safe water and sanitation project in Navi Mumbai",
+        "postContent":"Over 10,000 citizens from Turbhe Store, a suburb of Navi Mumbai, will now have access to clean and affordable drinking water through the \"Landmark Project\", a water and sanitation initiative by BASF, with the support of Navi Mumbai Municipal Corporation (NMMC)."
+    }
+    ]
+}

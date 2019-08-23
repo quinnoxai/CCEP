@@ -1,0 +1,37 @@
+{
+	"intents": [{
+			"intent": "sap_password",
+			"patterns": [
+				"i want to reset my password",
+				"how do I reset my password?",
+				"reset my password",
+				"reset password",
+				"can you help me with resetting my password",
+				"help me to reset my password",
+				"reset my sap password",
+				"how do i reset my sap password?",
+				"can you help me with resetting my sap password",
+				"help me to reset my sap password",
+				"i want to reset my sap password"
+			],
+			"response": "sap_password"
+		},
+		{
+			"intent": "unlock_account",
+			"patterns": [
+				"i want to unlock my account",
+				"how do I unlock my account?",
+				"unlock my account",
+				"unlock account",
+				"can you help me with unlocking my account",
+				"help me to unlock my account",
+				"unlock my sap account",
+				"how do i unlock my sap account?",
+				"can you help me with unlocking my sap account",
+				"help me to unlock my sap account",
+				"i want to unlock my sap account"
+			],
+			"response": "unlock_account"
+		}
+	]
+}

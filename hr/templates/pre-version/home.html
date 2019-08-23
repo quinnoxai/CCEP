@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="cache-control" content="no-cache" />
+	<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon"/>
+    <title>HR Helpdesk</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/ionicons.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+	<link href="{% static 'css/fonts.css' %}" rel="stylesheet">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<style>
+.preLoader {position: fixed;top: 0; left: 0;width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); display: flex; justify-content: center;align-items: center; z-index: 99;}
+.preLoader span {max-width: 160px; display: inline-block;width:160px;}
+.preLoader span img {width: 100%; height: auto; vertical-align: top;}
+</style>
+</head>
+<body>
+<span id="textToSpeechBtn" class="invisibleDiv"></span>
+<div class="preLoader">
+	<span><img src="{% static 'images/logo.svg' %}"></span>
+</div>
+<span class="pagBg"></span>
+<div class="wrapper">
+<div class="header">
+	<div class="container-fluid">
+		<a href="javascript:;" class="hLogo"><img src="{% static 'images/logo.svg' %}"></a>
+		<div class="widget">
+			<div class="time_widget">
+				<div id="time"></div>
+				<p>Good Afternoon, </span>John</span>!</p>
+			</div>
+			<div class="weather_widget"> <i class="icon ion-android-sunny"></i> <span id='temperature'></span>
+				<p class="currLoc">Houston</p>
+			</div>
+		</div>
+		<a href="javascript:void(0);" class="btnLogOut"></a>
+	</div>
+</div>
+<div class="clearfix"> </div>
+<div class="pgContent pgBotContent">
+	<div class="container-fluid">
+		<div class="topFeeds">
+			<span class="btnFeeds"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+			<div class="hScrollerDiv">
+				<div class="hScrollerDivContent feedsList" id="feedsList">
+					
+					
+				</div>
+			</div>
+		</div>
+		<!--top feed ends-->
+		<div class="botContainer">
+			<div class="botHeader">
+				<span class="botImg"><img src="{% static 'images/chatlogo.png' %}"></span> Ask Buddy, your Virtual Assistant
+				<span class="iconVoice"><p>Sound <i>On</i></p><img src="{% static 'images/voiceIcon.svg' %}"></span>
+			</div>
+
+			<div class="botContent">
+				<div class="chatContent" id="chatContent">
+
+				</div>
+				<!--chat content ends-->
+			</div>
+			<!--bot content ends-->
+					<div class="botFooter">
+				<div class="suggestions">
+					<h4>I guess you may want to view</h4>
+					<div class="hScrollerDiv">
+						<div class="hScrollerDivContent suggestionsList">
+							<span>Leave Policy</span>
+							<span>Address Proof Letters</span>
+							<span>Mediclaim</span>
+							<span>Case Finder</span>
+							<!--<span>Ecards Related FAQs</span>-->
+							<!--<span>Member enrollment Related FAQs</span>-->
+							<!--<span>Family Floater Policy</span>-->
+							<!--<span>Claims Related FAQs</span>-->
+							<!--<a href="javascript:void(0);" data-toggle="modal" data-target="#contestModal">Selfie Contest</a>-->
+							<!--<a href="/rmail">Share Stories</a>-->
+							<!--<a href="javascript:void(0);" data-toggle="modal" data-target="#myModal">Share Stories</a>-->
+						</div>
+					</div>
+				</div>
+				
+				<div class="enterChat">
+					<input type="text" class="form-control chatInput" name="chatInput" id="chatInput" autofocus placeholder="Say something..."  />
+					<span class="btnEnterUserChat"><i class="icon ion-android-send" aria-hidden="true"></i></span>
+				</div>
+			</div>
+			<!--botfooter ends-->
+			<div class="postOverlay" id="postOverlay">
+				<a href="javascript:;" class="btnClose btnbackToChat"><i class="icon ion-ios-close-empty"></i></a>
+				<div class="postOverlayContent">
+					<div class="postOverlayHeader">
+						<h3></h3>
+						<h6>
+							<span>ago</span>
+							<span></span>
+						</h6>
+					</div>
+					
+					<div class="postBanner oPostBanner"><img src="{{image}}"></div>
+					<div class="postImg oPostImg" style="background-image:url('{{image}}');"></div>
+					<div class="postOverlayText"></div>
+					<div class="videoContainer">
+						<video id="myVideo">
+							<source src="" type="video/mp4">
+						  Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="overlayPostFooter">
+						<div class="actionBtns">
+									<div class="socialInfo">
+						<span class="iconLike"><i class="fa fa-heart" aria-hidden="true"></i> 05</span>
+						<span class="iconComment"><i class="fa fa-commenting" aria-hidden="true"></i> 02</span>
+					</div>
+					<button type="button" class="btn btnFollow"></button>
+									</div>
+									<div class="socialShare">
+										<a href="javascript:;"><img src="images/iconFb.svg"></a>
+										<a href="javascript:;"><img src="images/iconwitter.svg"></a>
+										<a href="javascript:;"><img src="images/iconLinkedin.svg"></a>
+									</div>
+					</div>
+				</div>
+			</div>
+			<!--bot news suggestions overlay ends-->
+				
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+				
+					
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/modernizr-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/jquery-ui.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/mustache.min.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script>
+$(window).on("load",function(){
+    $(".preLoader").delay(2000).fadeOut(function(){
+        $("body").addClass("loaded");
+    });
+});
+</script>
+<script type="text/template" id="temp_usermsg">
+	<div class="chatMsg userMsg">
+		<div class="text">{% templatetag openvariable %} textMsg {% templatetag closevariable %}
+</div>
+
+	</div>
+</script>
+<!--usernormal text ends-->
+<script type="text/template" id="temp_botText">
+	<div class="chatMsg botMsg">
+		<span class="botImg"><img src="/static/images/chatlogo.png"></span>
+		<div class="text">{% templatetag openvariable %}{ textMsg }{% templatetag closevariable %}</div>
+		<div class="text">
+			<span class="loader"></span>
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="temp_nbContent">
+ <div class="chatMsg botSuggestions">
+	<div class="text">
+		<div class="suggestionsList">
+			{% templatetag openvariable %}# data{% templatetag closevariable %}
+			<span>{% templatetag openvariable %}name{% templatetag closevariable %}</span>
+			{% templatetag openvariable %} /data{% templatetag closevariable %}
+		</div>
+	</div>
+</div>
+ </script>
+
+<script type="text/template" id="temp_nbContentTable">
+ <div class="chatMsg botSuggestions">
+	<div class="text br0">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>National/Fixed Holidays</th>
+					<th>Location</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% templatetag openvariable %}# data{% templatetag closevariable %}
+				<tr>
+					<td>{% templatetag openvariable %}date{% templatetag closevariable %}</td>
+					<td>{% templatetag openvariable %}holiday{% templatetag closevariable %}</td>
+					<td>{% templatetag openvariable %}location{% templatetag closevariable %}</td>
+				</tr>
+			{% templatetag openvariable %} /data{% templatetag closevariable %}
+			</tbody>
+		</table>
+
+		</div>
+	</div>
+</div>
+ </script>
+
+
+<!--bot suggestion ends-->
+<script type="text/javascript">
+$(window).on("load",function() {
+	setTimeout(function(){
+		showWelcomeBotMsg();
+	},2500);
+});
+$(document).ready(function(){
+	var username = localStorage.getItem("firstname");
+    if(username != null || username != "") {
+    	$("h2 span").html(username);
+    	$(".time_widget p span").html(username);
+    }
+});
+</script>
+</body>
+</html>

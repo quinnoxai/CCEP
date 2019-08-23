@@ -1,0 +1,293 @@
+{
+  "intents": [
+    {
+      "intent": "public_holidays",
+      "patterns": [
+        "Public holidays in quinnox",
+        "public holidays",
+        "upcoming public holidays?",
+        "good time to plan a long vacation?",
+        "how many public holidays?",
+        "show the public holiday calendar",
+        "How many public holidays are we entitled during a year",
+        "Public Holidays entitlement during the year"
+      ],
+	  "category":"public_leave",
+	  "category_name":"Public Holidays",
+	  "response":""
+    },
+    {
+      "intent": "tubectomy",
+      "patterns": [
+        "How many days of leaves are allowed in case of tubectomy",
+        "tubectomy leaves",
+        "leaves for tumbectomy",
+        "Leaves allowed in case of tubectomy"
+      ],
+	  "category":"maternity",
+	  "category_name":"Tubectomy",
+	  "response":"In case of tubectomy operations, women employees are entitled to a leave of two weeks immediately following the day of the operation."
+    },
+    {
+      "intent": "miscarriage",
+      "patterns": [
+        "are leave allowed for misscariage",
+        "any leaves for miscarriage",
+        "leaves allowed for miscarriage",
+        "Leaves allowed in case of miscarriage",
+        "How many days of leaves are allowed in case of miscarriage",
+        "miscarriage",
+        "Medical termination of pregnancy",
+        "misscariage"
+      ],
+	  "category":"maternity",
+	  "category_name":"Miscarriage",
+	  "response":"In case of miscarriage or medical termination of pregnancy, women employees are entitled to leave for a period of six weeks (inclusive of weekends and holidays) immediately following the day of miscarriage or medical termination of pregnancy."
+    },
+    {
+      "intent": "maternity_bonus ",
+      "patterns": [
+        "what is the maternity bonus?",
+        "is maternity bonus allowed?",
+        "any allowance for maternity bonus?",
+        "What is maternity bonus and what is the bonus amount",
+        "maternity bonus",
+        "maternity amount bonus",
+        "ML Bonus",
+        "ML amount",
+        "When is maternity bonus amount paid?"
+      ],
+	  "category":"maternity",
+	  "category_name":"Maternity Bonus",
+	  "response":"As per the Maternity Act, a statutory maternity bonus of INR 3500 will be paid for all women employees in the first month of their maternity leave as part of salary. This amount is payable even in case of a miscarriage."
+    },
+    {
+      "intent": "documents_maternity",
+      "patterns": [
+        "Are there any documents to be submitted regarding Maternity Leave?",
+        "documents for maternity leave",
+        "documents maternity",
+        "Documents to be submitted while availing Maternity Leave / ML?",
+        "any documents to be submitted for maternity leave?"
+      ],
+	  "category":"maternity",
+	  "category_name":"Documents to be submitted",
+	  "response":""
+    },
+    {
+      "intent": "eligibility_maternity",
+      "patterns": [
+        "What is the Maternity Leave eligibility for a woman employee at Quinnox India? ",
+        "eligibilty for maternity",
+        "eligibilty criteria for maternity",
+        "maternity eligibility",
+        "What is the Maternity Leave eligibility for a woman employee at Quinnox India from the 3rd child onwards",
+        "third child maternity criteria",
+        " What is the Maternity Leave eligibility for a woman employee at Quinnox India in case of child through surrogacy OR adopting a child less than 3 months old?"
+      ],
+	  "category":"maternity",
+	  "category_name":"Maternity Eligibility",
+	  "response":"Women employees are eligible for a maternity leave of 26 weeks i.e. 182 days for the first two children. Women employees with more than two children, Commissioning Mothers (child through surrogacy) and adopting mothers who adopt a baby below 3 months of age will be entitled for 12 weeks i.e. 84 days of Maternity Leave. Maternity leave covers pre-delivery & post-delivery and is inclusive of weekends and holidays. "
+    },
+    {
+      "intent": "advance_leaves",
+      "patterns": [
+        "Advance leaves?",
+        "Can i get advance leaves?",
+        "Am i allowed advance leaves?",
+        "What is the maximum number of advance leaves granted under permissible circumstances in a year",
+        "How many days of advance leave is allowed",
+        "when can I get advance leaves?",
+        "For what purposes can I avail advance leave and how much",
+        "how many advance leaves can I get?"
+      ],
+	  "category":"advance",
+	  "category_name":"Advance Leaves",
+	  "response":"You are permitted to avail “Advance PL” up to a maximum of 10 days in a calendar year, at the discretion of your Manager. Advance leaves is for certain personal emergencies involving self and family members like marriage, childbirth or adoption, medical emergency, death, etc. and any other scenarios."
+	  
+    },
+    {
+      "intent": "encashed_privilege ",
+      "patterns": [
+        "Leave encashment payout",
+        "On what basis are Privilege Leaves balance encashed",
+        "leaves encashment",
+        "Privilege leaves encashed"
+      ],
+	  "category":"privilege",
+	  "category_name":"Leave Encashment",
+	  "response":"The privilege leaves are encashed on Basic Salary"
+    },
+    {
+      "intent": "notice_period_eligibility",
+      "patterns": [
+        "how many leaves can I get on my notice period?",
+        "leaves in notice period",
+        "Leave eligibility during notice period",
+        "Leave eligibility during notice period",
+        "How many days of Privilege Leaves can be availed I’m on my 3 months’ notice period",
+        "notice period eligibility for leaves"
+      ],
+	  "category":"notice_period",
+	  "category_name":"Leave Eligibility for Notice Period",
+	  "response":"While on notice period, a maximum of 4.5 days of leave in a three months’ period can be availed subject to a positive leave balance and approval from Manager. For e.g. if you are serving notice period you are eligible to apply for 1.5 days of PL in the first month or for three days in the second month (provided no PL was availed after they resigned) or for 4.5 days in the third month (provided no PL was availed in the previous months)."
+    },
+    {
+      "intent": "apply_leave_advance",
+      "patterns": [
+        "Should I apply for leave in advance?",
+        "How soon should I apply for planned leave?",
+        "How many days in advance should I apply for leave",
+        "apply for leave in advance",
+        "Should i apply for leave beforehand?"
+      ],
+	  "category":"advance",
+	  "category_name":"Advance Leaves",
+	  "response":"For any planned leave, you need to apply for leave in the leave module at least 1 week prior whenever possible. For any emergency unplanned leaves, you need to apply for leave immediately after returning back to work."
+    },
+    {
+      "intent": "half_day",
+      "patterns": [
+        "When should I apply for half day PL on QPortal",
+        "half day leave",
+        "criteria for half day leave",
+        "Can I apply for half day leave",
+        "When should I apply for half day leave"
+      ],
+	  "category":"privilege",
+	  "category_name":"Half Day",
+	  "response":"Employees are expected to work for 8 hours per day to constitute a full days’ work. If an employee works for more than 4 hours but less than 6 hours, then it is will be considered as half day working. "
+    },
+    {
+      "intent": "maximum_encashment",
+      "patterns": [
+        "What is the maximum number of Privilege Leaves encashed in a calendar year?",
+        "maximum leave encashment",
+        "Can I encash my leaves",
+        "How many leaves are encashed in a year",
+        "max leave encashment"
+      ],
+	  "category":"privilege",
+	  "category_name":"Max leave encashment",
+	  "response":"After leave carry forward to the maximum capping of 45 days, any balance leaves at the time of year-end carry forward will be encashed."
+    },
+    {
+      "intent": "leave_carry_forward",
+      "patterns": [
+        "Leave Carry Forward",
+        "Leave Carry Forward Logic",
+        "How many Privilege Leaves earned during the year can be carried forward from current year to the next calendar year?",
+        "max leave carry forward",
+        "maximum leave carry forward",
+        "Maximum PL carry forward allowed",
+        "max PL carry forward allowed",
+        "What is the maximum leave carry forward allowed as per policy?",
+        "What is the maximum capping of Privilege Leaves at the time of the annual carry forward"
+      ],
+	  "category":"carry_forward",
+	  "category_name":"Leave Carry Forward",
+	  "response":"Upto 10 PL balance earned during the year will be carried forward to the next year and balance PL after carry forward (if any) will be encashed.  If the balance at the time of carry forward reached a capping of 45, such leaves beyond 45 will be encashed."
+    },
+    {
+      "intent": "leave_credit_notice_period",
+      "patterns": [
+        "What is the Privilege Leaves credit for the last month of notice period",
+        "how many leave will I get for the last month of notice period",
+        "How many leaves will be credited for me if my last working day on or before 10th of the month",
+        "Do I receive leave credits after resignation?",
+        "I’m I eligible for leave credits during my notice period",
+        "How many leaves / PL / PLs credits do I receive during my notice period"
+      ],
+	  "category":"notice_period_credit",
+	  "category_name":"Leave credits during notice period",
+	  "response":"Yes, employees are eligible for leave credits even after resignation during their notice period. The rate of credit is the same i.e. 1.75 per month after completion of the month other than for the last month of service. For the last month of service, 0 leaves credit is applicable if last date of service is on or before 10th and 1.75 if the last date of service after 10th."
+    },
+    {
+      "intent": "leave_credit_for_joining",
+      "patterns": [
+        "Leave credit for new joinee",
+        "What is the leave policy for new joinee",
+        "What is the Privilege Leaves credit at the end of the calendar month for new joiners with date of joining on or before 20th of the month",
+        "How many leaves will be credited in the first month after joining",
+        "How many PL am I eligible for the month I joined Quinnox if I have joined",
+        "Do I get full 1.75 PL credit for the 1st month of service"
+      ],
+	  "category":"leave_credit_for_joining",
+	  "category_name":"Leave credits for joining",
+	  "response":"PL is credited at the rate of 1.75 days per month on the first of the following month after completion of a month’s service.So, new employees will not be eligible for entire 21 days in a calendar year but will receive a credit on pro-rata basis. A new employee who joins on or before 20th of the month will receive a credit of 1.75 PL on the 1st day of the next calendar month for the 1st month of service in Quinnox.e.g. if date of joining is on or before 20th May, then 1.75 PL will be credited on 01 June."
+
+    },
+    {
+      "intent": "leave_eligibility",
+      "patterns": [
+        "How many days of Privilege Leaves I am eligible for in a calendar year i.e. Jan to Dec",
+        "How many leaves credited in a year",
+        "How many PL credited in a year",
+        "How many Privilege Leaves credited in a year?",
+        "how many leaves in a year?",
+        " Leave eligibility in a year"
+      ],
+	  "category":"leave_credit",
+	  "category_name":"Leave credits",
+	  "response":"Total privilege leaves (PL) entitlement in a calendar year is 21. PL is credited at the rate of 1.75 days per month on the first of the following month after completion of a month’s service. So, new employees will not be eligible for entire 21 days in a calendar year but will receive a credit on pro-rata basis. "
+    },
+    {
+      "intent": "types_leaves",
+      "patterns": [
+        "How many types of leaves do we have",
+        "Types of leaves",
+        "Quinnox leave types",
+        "What are the different leave types"
+      ],
+	  "category":"leave_types",
+	  "category_name":"Leave Type",
+	  "response":"The different types of leaves are a) Privilege Leaves which is applicable for all and b) Maternity Leave for women employees."
+    },
+    {
+      "intent": "leave_apply",
+      "patterns": [
+        "how to apply for leave?",
+        "leave application?",
+        "where can I apply for leave?",
+        "Applying for leave"
+      ],
+	  "category":"leave",
+	  "category_name":"How to apply for leave?",
+	  "response":"Use the QPortal leave module to apply for leaves"
+    }
+  ],
+  "data": [
+    {
+      "intent": "public_holidays",
+      "patterns": [
+        {
+          "pattern_name": "Public holidays in quinnox"
+        },
+        {
+          "pattern_name": "public holidays"
+        },{
+          "pattern_name": "upcoming public holidays?"
+        },
+        {
+          "pattern_name": "good time to plan a long vacation?"
+        },
+        {
+          "pattern_name": "how many public holidays?"
+        },
+        {
+          "pattern_name": "show the public holiday calendar"
+        },
+        {
+          "pattern_name": "How many public holidays are we entitled during a year"
+        },
+        {
+          "pattern_name": "Public Holidays entitlement during the year"
+        }
+      ],
+	  "category":"public_leave",
+	  "category_name":"Public Holidays",
+	  "response":""
+    }
+  ]
+}
+

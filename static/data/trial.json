@@ -1,0 +1,18 @@
+{"intents": [
+    {
+	"intent": "kaya_smiles",
+	"patterns": ["How to use Kaya Smiles?","Do you know how to use Kaya Smiles?","Tell me How to use Kaya Smiles?","Kaya Smiles","Help me to use Kaya Smiles","How can I use my Kaya Smiles?","Help me with Kaya Smiles?"],
+	"response": "You can redeem your Amazon Coins on Android devices, Fire tablets, and the Amazon Appstore on the Amazon website. To spend your Coins: On Android devices and Fire tablets, tap the price of the app from the detail page, or tap the in-app item within an app. Amazon Coins is the default payment option."
+    },
+	{
+	"intent": "prescribed_medicines",
+	"patterns": ["Show me my prescribed medicines","Tell me my prescribed medicines","Do you know anything about my prescribed medicines","Do you have any idea related my prescribed medicines?","Give me my prescribed medicines?","What are my prescribed medicines?","Which medicines are prescribed for me?"],
+	"response": "A prescription drug is a pharmaceutical drug that legally requires a medical prescription to be dispensed. In contrast, over-the-counter drugs can be obtained without a prescription."
+    },
+	{
+	"intent": "refer_someone",
+	"patterns": ["How to refer someone?","How can I refer someone?","Help me to refer someone?","Tell me how to refer someone?","Tell me how can I refer someone?","Do you know how to to refer someone?","Any idea how to refer someone?","Do you have any idea how to refer someone?","Is there any steps to refer someone?","I want to refer someone?"],
+	"response": "I love using CardCash.com to save money every time I shop and I thought you might too."
+	}
+	]
+}

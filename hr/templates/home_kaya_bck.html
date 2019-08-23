@@ -1,0 +1,854 @@
+﻿<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon"/>
+    <title>Kaya Clinic - Humanised Experience</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/ionicons.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}" />
+	<link href="{% static 'css/fonts.css' %}" rel="stylesheet">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'js/jquery-ui.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+	<script src="{% static 'js/mustache.min.js' %}"></script>
+</head>
+<body>
+<div class="preLoader">
+	<span><img src="{% static 'images/clogo.png' %}"></span>
+</div>
+<span class="pagBg"></span>
+<div class="wrapper">
+<div class="header">
+	<a href="javascript:;" class="cLogo"><img src="{% static 'images/clogo.png' %}"></a>
+	<ul class="headerRightSec">
+		<li class="time_widget">
+			<span>21:01</span>
+			<p>Good Afternoon!</p>
+		</li>
+		<li class="weather_widget"> 
+			<span class="ion-icon">48°F</span>
+			<p class="currLoc">Mumbai</p>
+		</li>
+		<li class="notificationInfo">
+			<a href="javascript:void(0);"></a>
+		</li>
+		<li>
+			<a href="javascript:void(0);">M&nbsp;D</a>
+		</li>
+	</ul>
+</div>
+<!--header ends here-->
+<div class="pgContent pgBotContent">
+	<div class="container-fluid">
+		<div class="botContainer">
+			<!-- <div class="botHeader">
+				<span class="botImg"><img src="/static/images/chatlogo.png"></span> Ask Buddy, your Intranet Assistant
+				<span class="iconVoice"><img src="/static/images/voiceIcon.svg"></span>
+			</div> -->
+			
+			<div class="botContent">
+				<div class="chatContent" id="chatContent"></div>
+				<!--chat content ends-->
+			</div>
+			<!--bot content ends-->
+			<div class="botFooter">
+				<div class="suggestions">
+					<div class="suggestionsList sliderContainer">
+						<div class="sliderDiv">
+							<span >Upcoming Appointments</span>
+							<span>Kaya Smile Balance</span>
+						        <span>Refer someone</span>
+						        <span>Prescribed medicines</span>
+						</div>
+					</div>
+				</div>
+				<div class="enterChat">
+					<input type="text" class="form-control chatInput" name="chatInput" id="chatInput" placeholder="Tell me how can I help you..."/>
+					<span class="btnEnterUserChat"></span>
+				</div>
+			</div>
+			<!--bot footer ends-->
+			
+		</div>
+		<!--bot container-->
+		<div class="rightFeeds">
+			<span class="btnFeeds">
+				<!-- <i class="fa fa-angle-double-right" aria-hidden="true"></i> -->
+			</span>
+			<div class="feedsList" id="feedsList">
+				<div class="box feedBox feedBox1" data-attr="ongoingTreatment">
+					<div class="feedBoxContent">
+						<div class="feedBoxFront">
+							<div class="feedBoxFrontContent">
+								<h4>Your Ongoing Treatment</h4>
+								<h5>Insta Skin Brilliance</h5>
+							</div>
+						</div>
+						<div class="feedBoxBack">
+							<div class="feedBoxBackHeader">
+								<h4>Your Ongoing Treatment</h4>
+								<h5>Insta Skin Brilliance</h5>
+							</div>
+							<div class="feedBoxBackContent">
+								<div class="sessionChart">
+									<div class="cLine cline1">
+										<canvas id="cLine1" width="100" height="100">
+										</canvas>
+									</div>
+									<div class="cLine cline2">
+											<canvas id="cLine2" width="100" height="100">
+											</canvas>
+										</div>
+									<p class="tgText"><span>5</span> /8</p>
+									<span class="chartLabel chartLabel1">Consumed<br> sessions</span>
+									<span class="chartLabel chartLabel2">Total<br> sessions</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--feedBox 1 ends-->
+				<div class="changeDiv" data-count="1">
+						<div class="box feedBox feedBox2 showMe" data-attr="productDetails1">
+							<div class="feedBoxContent">
+								<div class="feedBoxFront">
+									<div class="feedBoxFrontContent">
+										<h4>Product Best Suited for your Skin</h4>
+										<h5>Sun Defence</h5>
+									</div>
+								</div>
+								<div class="feedBoxBack">
+									<div class="feedBoxBackHeader">
+										<h4>Product Best Suited for your Skin</h4>
+										<h5>Sun Defence</h5>
+									</div>
+									<div class="feedBoxBackContent">
+										<h6>Product Ratings</h6>
+										<div class="ratingAnalysis">
+											<p><span></span> 50</p>
+											<p><span></span> 03</p>
+											<p><span></span> 01</p>
+											<p><span></span> 00</p>
+											<p><span></span> 00</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--feedBox 2 ends-->
+						<div class="box feedBox feedBox5" data-attr="productDetails2">
+							<div class="feedBoxContent">
+								<div class="feedBoxFront">
+									<div class="feedBoxFrontContent">
+										<h4>Product Best Suited for your Skin</h4>
+										<h5>Brightening Beads Cleanser</h5>
+									</div>
+								</div>
+								<div class="feedBoxBack">
+									<div class="feedBoxBackHeader">
+										<h4>Product Best Suited for your Skin</h4>
+										<h5>Brightening Beads Cleanser</h5>
+									</div>
+									<div class="feedBoxBackContent">
+										<h6>Product Ratings</h6>
+										<div class="ratingAnalysis">
+											<p><span></span> 70</p>
+											<p><span></span> 12</p>
+											<p><span></span> 05</p>
+											<p><span></span> 01</p>
+											<p><span></span> 00</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--feedBox 4 ends-->
+						<div class="box feedBox feedBox6" data-attr="productDetails3">
+							<div class="feedBoxContent">
+								<div class="feedBoxFront">
+									<div class="feedBoxFrontContent">
+										<h4>Product Best Suited for your Skin</h4>
+										<h5>Kaya Skin Clinic White Lumenis Brightening Day Cream SPF-15</h5>
+									</div>
+								</div>
+								<div class="feedBoxBack">
+									<div class="feedBoxBackHeader">
+										<h4>Product Best Suited for your Skin</h4>
+										<h5>Kaya Skin Clinic White Lumenis Brightening Day Cream SPF-15</h5>
+									</div>
+									<div class="feedBoxBackContent">
+										<h6>Product Ratings</h6>
+										<div class="ratingAnalysis">
+											<p><span></span> 70</p>
+											<p><span></span> 12</p>
+											<p><span></span> 05</p>
+											<p><span></span> 01</p>
+											<p><span></span> 00</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--feedBox 5 ends-->
+					</div>
+				<div class="changeDiv" data-count="2">
+						<div class="box feedBox feedBox3 showMe" data-attr="offerRecommendations1">
+							<div class="feedBoxContent">
+								<div class="feedBoxFront">
+									<div class="feedBoxFrontContent">
+										<h4>Your Dermatologist Recommends</h4>
+										<h5>Aqua Therapy</h5>
+									</div>
+								</div>
+								<div class="feedBoxBack">
+									<div class="feedBoxBackHeader">
+										<h4>Your Dermatologist Recommends</h4>
+										<h5>Aqua Therapy</h5>
+									</div>
+									<div class="feedBoxBackContent">
+										<div class="giftCard">
+											<h5>Gift Card</h5>
+											<h6><span>20%</span> OFF</h6>
+											<p>For being our regular customer, you have been rewarded to avail this therapy.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box feedBox feedBox7" data-attr="offerRecommendations2">
+							<div class="feedBoxContent">
+								<div class="feedBoxFront">
+									<div class="feedBoxFrontContent">
+										<h4>Your Dermatologist Recommends</h4>
+										<h5>Signature Face Therapy</h5>
+									</div>
+								</div>
+								<div class="feedBoxBack">
+									<div class="feedBoxBackHeader">
+										<h4>Your Dermatologist Recommends</h4>
+										<h5>Signature Face Therapy</h5>
+									</div>
+									<div class="feedBoxBackContent">
+										<div class="giftCard">
+											<h5>Gift Card</h5>
+											<h6><span>20%</span> OFF</h6>
+											<p>For being our regular customer, you have been rewarded to avail this therapy.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box feedBox feedBox8" data-attr="offerRecommendations3">
+							<div class="feedBoxContent">
+								<div class="feedBoxFront">
+									<div class="feedBoxFrontContent">
+										<h4>Your Dermatologist Recommends</h4>
+										<h5>Derma Regen Four Layer Therapy </h5>
+									</div>
+								</div>
+								<div class="feedBoxBack">
+									<div class="feedBoxBackHeader">
+										<h4>Your Dermatologist Recommends</h4>
+										<h5>Derma Regen Four Layer Therapy </h5>
+									</div>
+									<div class="feedBoxBackContent">
+										<div class="giftCard">
+											<h5>Gift Card</h5>
+											<h6><span>20%</span> OFF</h6>
+											<p>For being our regular customer, you have been rewarded to avail this therapy.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<!--top feed ends-->
+	</div>
+</div>
+<!--page content ends here-->
+</div>
+
+
+<script type="text/template" id="temp_usermsg">
+	<div class="chatMsg userMsg">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<div class="text">{% templatetag openvariable %}{textMsg}{% templatetag closevariable %}</div>
+			</div>
+			<p class="pTime">20:57</p>
+		</div>
+	</div>
+</script>
+<!--usernormal text ends-->
+
+
+
+<script type="text/template" id="temp_botText">
+	<div class="chatMsg botMsg">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<span class="botImg">
+					<img src="/static/images/botIcon_static.png">
+				</span>
+				<div class="text">{% templatetag openvariable %}{textMsg}{% templatetag closevariable %}</div>
+			</div>
+			<p class="pTime">20:57</p>
+		</div>
+	</div>
+</script>
+<!--bot normal text ends-->
+<script type="text/template" id="temp_botTextActions">
+	<div class="chatMsg botMsg">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<span class="botImg">
+					<img src="/static/images/botIcon_static.png">
+				</span>
+				<div class="text">Your upcoming appointment is in <strong>next 04 days</strong>.<br> Date: <strong>20 Apr 2019</strong><br>Time: <strong>14:00 hrs</strong><br>Location: <strong>Viviana Mall, Thane</div>
+			</div>
+			<p class="pTime">20:57</p>
+			<div class="cActionBtns">
+				<span class="cBtnEdit"></span>
+				<span class="cBtnConfirm"></span>
+			</div>
+		</div>
+	</div>
+</script>
+<!--bot msg with action btns ends-->
+
+
+<script type="text/template" id="temp_feedSuggestions">
+{% templatetag openvariable %} #data {% templatetag closevariable %}
+<div class="box feedBox">
+	<div class="feedBoxFront" style="display:none;">
+		<div class="feedBoxFrontContent">
+			<h4>{{title}}</h4>
+			<h5>{{description}}</h5>
+		</div>
+	</div>
+	<div class="feedBoxBack">
+		<div class="feedBoxBackContent">
+			<h4>{{title}}</h4>
+			<h5>{{description}}</h5>
+		</div>
+	</div>
+</div>
+{% templatetag openvariable %} /data {% templatetag closevariable %}
+</script>
+<!--feed suggestion ends-->
+<script type="text/template" id="temp_editAppointmentDetails">
+<div class="chatMsg botMsg">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				<p>Please enter the details to edit your upcoming appointment.</p>
+				<div class="chatForm">
+					<form>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="date">Date</label>
+s									<div class="inputIconDiv inputDatepickerDiv">
+										<input type="text" class="form-control" id="date" name="date" placeholder="Enter Date" readonly="true">
+										<input type="hidden" class="hiddenInputDate"><span></span>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="time">Time</label>
+									<div class="inputIconDiv inputTimepickerDiv">
+										<input type="text" class="form-control" id="time" name="time" placeholder="Enter Time">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="location">Location</label>
+							<div class="inputIconDiv inputLocpickerDiv">
+								<input type="text" class="form-control" id="location" name="location" placeholder="Enter Location">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div>
+</script>
+<!--edit appointment template ends-->
+<script type="text/template" id="temp_ongoingTreatment">
+<div class="chatMsg botMsg">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				<p>Your ongoing therapy 'Insta Skin Brilliance' has
+					<span class="divStars">
+						<i class="active"></i>
+						<i class="active"></i>
+						<i class="active"></i>
+						<i class="active"></i>
+						<i></i>
+					</span>
+					Stars
+				</p>
+				<div class="suggestions">
+					<div class="suggestionsList rateXpBtnsDiv">
+						<span>Infrastructure</span>
+						<span>Amenities</span>
+						<span>Service</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div>
+</script>
+<!--show ongoingTreatment ends-->
+<script type="text/template" id="temp_productDetails1">
+<div class="chatMsg botMsg chatMsgProduct">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				<div class="pContent">
+					<div class="pImg">
+						<img src="/static/images/img_product1.png">
+						<button type="button" class="btn btnPrimary">Add to Cart</button>
+					</div>
+					<div class="pText">
+						<h3>Daily Use Sunscreen SPF 30</h3>
+						<p>Sun Defense</p>
+						<p>Skin Type: Combination & Oily</p>
+						<p>75ML</p>
+						<h4>Your Price: <span>Rs. 770.00/-</span></h4>
+						<p>Everyday use broad spectrum Sunscreen that helps fight effects of UVA and UVB rays, along with Niacinamide for brighter skin tone.</p>
+					</div>
+				</div>
+				<div class="pContentMore">
+					<h5>Product Description</h5>
+					<p>A broad-spectrum sunscreen that peotects your skin from harmful UVA-UVB rays. PA++++ shield  and Ultra Bootstar rating of 5 ensures highest UVA protection. Niacinamide, potent whitening active removes tan & lightens skin. Lightweight, non-greasy formula and PABA free.</p>
+					<h5>Efficacy</h5>
+					<p>Shields against UVA-UVB rays.<br> PA++++ shield and Ultra Bootstar rating of 5 ensures highest protection.<br> Removes tan and lightens skin</p>
+					<h5>Ingredient Science</h5>
+					<p>Shields against UVA-UVB rays.<br> PA++++ shield and Ultra Bootstar rating of 5 ensures highest protection.<br> This PABA-free sunscreen is potent with broad spectrum sunscreen actives which protect the skin from harmful UVA & UVB rays. Niacinamide, potent whitening active, removes tan and lightens skin.</p>
+				</div>
+				
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div>			
+</script>
+<!--productDetails1 template ends-->
+<script type="text/template" id="temp_productDetails2">
+	<div class="chatMsg botMsg chatMsgProduct">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<span class="botImg">
+					<img src="/static/images/botIcon_static.png">
+				</span>
+				<div class="text">
+					<div class="pContent">
+						<div class="pImg">
+							<img src="/static/images/img_product5.jpg">
+							<button type="button" class="btn btnPrimary">Add to Cart</button>
+						</div>
+						<div class="pText">
+							<h3>Brightening Beads Cleanser</h3>
+							<p>Cleanser</p>
+							<p>Skin Type: All</p>
+							<p>100ML</p>
+							<h4>Your Price: <span>Rs. 360.00/-</span></h4>
+							<p>Apply to wet face and gently massage with fingertips. Rinse thoroughly with water.</p>
+						</div>
+					</div>
+					<div class="pContentMore">
+						<h5>Product Description</h5>
+						<p>This cleanser is enriched with a combination of Vitamin B3 and E. This refreshing face cleanser brightens your skin by gently removing impurities that make your skin dull. Its unique brightening beads helps to exfoliate dead skin cells without leaving your skin dry. Presence of milk AHA moisturizes and rejuvenates your skin. Results in a smooth nourished and glowing skin.</p>
+						<h5>Efficacy</h5>
+						<p>Vitamin B3 and E and AHA<br> Removes impurities to brighten up the skin.<br>Exfoliate dead skin cells without leaving skin dry<br> AHA moisturizes and rejuvenates skin</p>
+						<h5>Ingredient Science</h5>
+						<p>Enriched with Vitamin B3 and E and AHA</p>
+					</div>
+					
+				</div>
+			</div>
+			<p class="pTime">20:57</p>
+		</div>
+	</div>			
+	</script>
+<!--productDetails2 template ends-->
+<script type="text/template" id="temp_productDetails3">
+	<div class="chatMsg botMsg chatMsgProduct">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<span class="botImg">
+					<img src="/static/images/botIcon_static.png">
+				</span>
+				<div class="text">
+					<div class="pContent">
+						<div class="pImg">
+							<img src="/static/images/img_product6.jpg">
+							<button type="button" class="btn btnPrimary">Add to Cart</button>
+						</div>
+						<div class="pText">
+							<h3>Kaya Skin Clinic White Lumenis Brightening Day Cream SPF-15</h3>
+							<p>Brightening Cream</p>
+							<p>Skin Type: All</p>
+							<p>50ML</p>
+							<h4>Your Price: <span>Rs. 990.00/-</span></h4>
+						</div>
+					</div>
+					<div class="pContentMore">
+						<h5>Product Description</h5>
+						<p>Nourishing Day Cream with a unique potent whitening active Azelaic Acid works to give you notably lighter and brighter skin. Anti-Oxidant Vit-C helps fight free radicals and improve skin texture. UV protection system protects skin against harmful effects of UV rays. Regular use gives you visible results* in just 7 days.</p>
+						<h5>Efficacy</h5>
+						<p>Azelaic Acid to give lighter and brighter skin.<br>Anti-Oxidant Vit-C helps fight free radicals<br> Protection from UV rays</p>
+						<h5>Ingredient Science</h5>
+						<p>Aqua, Potassium Azeloyl Diglycinate, Glyceryl Monosterate PEG 100 Stearate, Avobenzone, Cetyl Avobenzone, Cetyl Alcohol, Caprilylic Capric Tri Glyceride, Octocrylene, Octocrylene, Octyl Methoxy Cinnamate, Hydroxyethyl, Micronized Titanium Dioxide, Sodium Ascorbyl Phosphate, Fragrance, Disodium EDTA, Phenoxyethanol</p>
+					</div>
+					
+				</div>
+			</div>
+			<p class="pTime">20:57</p>
+		</div>
+	</div>			
+</script>
+<!--productDetails3 template ends-->
+<script type="text/template" id="temp_offerRecommendations1">
+<div class="chatMsg botMsg chatMsgProduct" >
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				<div class="pContent">
+					<div class="pImg">
+						<img src="/static/images/img_product2.png">
+						<button type="button" class="btn btnPrimary">Avail</button>
+					</div>
+					<div class="pText">
+						<h3>Kaya Skin Clinic Acne-Free with Aqua Therapy&nbsp;Review</h3>
+						<p>Sessions Required: 01</p>
+						<p>Skin Type: Acne Prone</p>
+						<p>Therapy Cost: Rs. 5000.00/-</p>
+						<h4>Your Price: <span>Rs. 4000.00/-</span></h4>
+						<p>Add <a href="javascript:;">Smiley balance</a> and get Rs. 1500.00/- off on the total therapy cost.</p>
+					</div>
+				</div>
+				<div class="pContentMore">
+					<h5>Kaya Skin Clinic Acne-Free with Aqua Therapy Review</h5>
+					<p>Recently, Acne Mantra got a chance to try out the Acne-Free with Aqua Therapy at Kaya Skin Clinic. What is Acne-Free with Aqua Therapy? This service is a water based deep skin acne solution. It uses a cool jet of air and saline water which penetrates deep into the acne prone skin to cleanse, exfoliate and hydrate effectively.</p>
+					
+					<p>It helps your skin get purified from within so that the root cause of acne is targeted, and then treats it with a high efficacy peel, followed by an anti-acne mask that works effectively to reduce the chances of further occurrence of acne, giving you a clear, oil free, fresh skin.</p>
+				</div>
+
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div>				
+</script>
+<!--offerRecommendations1 template ends-->
+<script type="text/template" id="temp_offerRecommendations2">
+<div class="chatMsg botMsg chatMsgProduct" >
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				<div class="pContent">
+					<div class="pImg">
+						<img src="/static/images/img_product7.jpg">
+						<button type="button" class="btn btnPrimary">Avail</button>
+					</div>
+					<div class="pText">
+						<h3>Kaya Skin Clinic Signature Face Therapy Review</h3>
+						<p>Skin Type: All</p>
+						<p>Therapy Cost: Rs. 4200.00/-</p>
+						<h4>Your Price: <span>Rs. 3500.00/-</span></h4>
+						<p>Add <a href="javascript:;">Smiley balance</a> and get Rs. 800.00/- off on the total therapy cost.</p>
+					</div>
+				</div>
+				<div class="pContentMore">
+					<h5>Kaya Skin Clinic Signature Face Therapy Review</h5>
+					<p>When my colleague mentioned about a face therapy to be reviewed, I just jumped at the opportunity. When I walked in, I was given Kaya's signature drink, apple juice with cinnamon which was refreshing. I was then led to a dermatologist. She told me that I have oily skin and should therefore go easy on the moisturiser, and slightly uneven skin tone so I would need to use sunscreen twice a day.</p>
+					<p>She suggested that I go for a Fruit Sorbet Signature Therapy that will help retain the moisture while reducing the skin's oiliness.  She started with exfoliating my skin with aluminium crystals (yes, aluminium crystals!).  They poked me a bit, but it was fine. She then applied a vitamin C serum on my skin. It will help clear pigmentation, she said. It cooled my skin down. After keeping it on for ten minutes, she infused my skin with liquorice which again acted as a cooling agent, removing excess oil from the skin too.</p>
+					<p>After that was a 30-minute massage with a fruit cream. As she massaged the sweet-smelling cream on to my face and neck, I felt, calm and relaxed. After wiping it off with a warm water towel, she applied a kiwi mask on my face. I must say, this is simply the best mask I have tried so far. The kiwi smelled so yummy that I wanted to taste some! At the end of the treatment, my skin really felt relaxed and refreshed. And it has got back the glow it previously had!</p>
+				</div>
+
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div>				
+</script>
+<!--offerRecommendations2 template ends-->
+<script type="text/template" id="temp_offerRecommendations3">
+<div class="chatMsg botMsg chatMsgProduct" >
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				<div class="pContent">
+					<div class="pImg">
+						<img src="/static/images/img_product8.jpg">
+						<button type="button" class="btn btnPrimary">Avail</button>
+					</div>
+					<div class="pText">
+						<h3>Derma Regen Four Layer Therapy</h3>
+						<p>Skin Type: All</p>
+						<p>Therapy Cost: Rs. 4500.00/-</p>
+						<h4>Your Price: <span>Rs. 3200.00/-</span></h4>
+						<p>Add <a href="javascript:;">Smiley balance</a> and get Rs. 1000.00/- off on the total therapy cost.</p>
+					</div>
+				</div>
+				<div class="pContentMore">
+					<h5>Kaya Skin Clinic Derma Regen Four Layer Therapy Review</h5>
+					<p>Kaya Skin Clinic has just launched four internationally-acclaimed facials - the Derma-Regen 4 Layer Therapy, Intense White Dry Scrub, Antox-UltraSheen Therapy and Pure Pore Clear Skin. Derma-Regen is said to be great for anti-ageing, Pure Pore is for acne prone skin, Intense White for dry skin with pigmentation and Antox-UltraSheen for those looking for that elusive glow. Cosmopolitan UK has called the Repechage 4 Layer Facial, offered by Kaya as the Derma Regen 4 Layer Therapy as "the Best Facial of the Century" and I got the opportunity to try it out last week at the Kaya Skin Clinic in Salt Lake City Centre, Kolkata.</p>
+				</div>
+
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div>				
+</script>
+<!--offerRecommendations3 template ends-->
+<script type="text/template" id="temp_giveratings">
+<div class="chatMsg botMsg chatRatings">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				<p>Rate your experience</p>
+				<div class="divStars">
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+				</div>
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div> 
+</script>
+<!--show rating-->
+<script type="text/template" id="temp_kayasmiles">
+<div class="chatMsg botMsg botMsgHCard chatMsgHasSuggestions">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				<div class="ksImg w50">
+					<img src="/static/images/kaya_smiley.png">
+				</div>
+				<div class="ksText w50">
+					<p>Introducing Kaya Smiles, an exclusive loyalty program, designed to make your journey to beautiful skin as rewarding as possible.</p>
+					<p>There are <strong>3 tiers</strong> in this program - <strong>Platinum, Gold Elite, Gold.</strong> Platinum is the highest tier in the program. The eligibility for each tier depends on the amount of money spent at Kaya over a 12 month period.</p>
+				</div>
+			</div>
+		</div>
+		<div class="suggestions">
+			<div class="suggestionsList">
+				<span>About Kaya Smiles</span>
+				<span>Smile Calculator</span>
+				<span>Loyality Offers</span>
+				<span>Exclusive Offers</span>
+			</div>
+			<p class="pTime">20:57</p>
+		</div>
+	</div>
+</div>
+</script>
+<!--show kayasmiles template ends-->
+<script type="text/template" id="temp_chatinProducts">
+<div class="chatMsg botMsg chatProductCards">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				<div class="pCard">
+					<div class="pCardHeading">
+						<h5>Intense Clarity System</h5>
+						<h6>Combination, Dry & Normal Skin</h6>
+					</div>
+					<div class="pCardImg">
+					</div>
+					<p class="pPrice">your price <span>₹1940.00</span></p>
+					<div class="pCardFooter">
+						<button type="button" class="btn btnPrimaryOutline">Buy</button>
+						<button type="button" class="btn btnPrimaryOutline">Add to Cart</button>
+					</div>
+				</div>
+				<div class="pCard">
+					<div class="pCardHeading">
+						<h5>Complexion Perfector</h5>
+						<h6>All Skin Type</h6>
+					</div>
+					<div class="pCardImg">
+					</div>
+					<p class="pPrice">your price <span>₹950.00</span></p>
+					<div class="pCardFooter">
+						<button type="button" class="btn btnPrimaryOutline">Buy</button>
+						<button type="button" class="btn btnPrimaryOutline">Add to Cart</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div>
+</script>
+<!--show chatinProducts template ends-->
+<script type="text/template" id="temp_chatProductDescription">
+<div class="chatMsg botMsg botMsgHCard chatMsgHasSuggestions">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				<div class="ksImg">
+					<img src="/static/images/gift.png">
+				</div>
+				<div class="ksText">
+					<h5>REFER A FRIEND</h5>
+					<p>Enjoy <span class="tHighLight">500</span> smile balance when a friend shops and we'll give them <span class="tHighLight">20%</span> off their order.</p>
+				</div>
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div>
+</script>
+<!--show chatProductDescription template ends-->
+<script type="text/template" id="temp_weekend">
+<div class="chatMsg botMsg chatMsgHasSuggestions">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				I recommend you choose a weekday and earn extra <span class="kSmileText">50 Kaya Smiles</span>
+				<br>
+				Would you want to book a weekend slot instead?
+			</div>
+		</div>
+		<div class="suggestions">
+			<div class="suggestionsList">
+				<span class="bYes">Yes</span>
+				<span class="bNo">No</span>
+			</div>
+			<p class="pTime">20:57</p>
+		</div>
+	</div>
+</div>
+</script>
+<!--show weekend template ends-->
+<script src="{% static 'js/app.js' %}"></script>
+<!--script specific to home page starts-->
+<script type="text/javascript">
+var ww = $(window).width();
+var wh = $(window).height();
+$(document).ready(function(){
+	if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i) || (ww < 800)){
+		$("body").addClass("not-desktop");
+		
+		var c2 = document.getElementById("cLine1");
+		var ctx2 = c2.getContext("2d");
+		ctx2.beginPath();
+		ctx2.arc(45, 45, 40, 0 * Math.PI, 2 * Math.PI);
+		ctx2.strokeStyle='#e3e6ea';
+		ctx2.lineWidth=6;
+		ctx2.stroke();
+		/**line2**/
+		var c2 = document.getElementById("cLine2");
+		var ctx2 = c2.getContext("2d");
+		ctx2.beginPath();
+		ctx2.arc(45, 45, 40, 0.5 * Math.PI, 1.75 * Math.PI);
+		ctx2.strokeStyle='#73e1c8';
+		ctx2.lineWidth=6;
+		ctx2.stroke();
+
+		//$(".pgBotContent").addClass("pgBotCFeedClosed");
+		if(ww < 801){
+			$(".pgBotContent").addClass("pgBotCFeedClosed");
+			$(document).on("click",".botContainer,.header",function(e) {
+				$(".pgBotContent").addClass("pgBotCFeedClosed");
+			});
+		}
+	}
+	else
+	{
+		
+		if(ww > 800){
+			$(".feedsList").mCustomScrollbar();
+		}
+		var c2 = document.getElementById("cLine1");
+		var ctx2 = c2.getContext("2d");
+		ctx2.beginPath();
+		ctx2.arc(50, 50, 45, 0 * Math.PI, 2 * Math.PI);
+		ctx2.strokeStyle='#e3e6ea';
+		ctx2.lineWidth=6;
+		ctx2.stroke();
+		/**line2**/
+		var c2 = document.getElementById("cLine2");
+		var ctx2 = c2.getContext("2d");
+		ctx2.beginPath();
+		ctx2.arc(50, 50, 45, 0.5 * Math.PI, 1.75 * Math.PI);
+		ctx2.strokeStyle='#73e1c8';
+		ctx2.lineWidth=6;
+		ctx2.stroke();
+		
+	}
+	setTimeout(function() {
+		sliderInit();
+	}, 2000);
+	
+	showWelcomeBotMsg();
+	scrollChatDown();
+	var options = {
+		templateId: '#temp_feedSuggestions',
+		msgContainerId: '#feedsList'
+	};
+	
+	//showMustacheTemplateFeedsSuggestions(options);	
+});
+
+</script>
+</body>
+</html>

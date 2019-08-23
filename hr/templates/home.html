@@ -1,0 +1,784 @@
+﻿<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="{% static 'images/favicon_new.ico' %}" type="image/x-icon"/>
+    <title>Fizzy - Coca Cola Virtual Assistant</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/ionicons.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}" />
+	<link href="{% static 'css/fonts.css' %}" rel="stylesheet">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/speechsynethsis.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery-ui.js' %}"></script>
+	<script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+	<script src="{% static 'js/aws-sdk-2.410.0.min.js' %}"></script>
+
+	<script src="{% static 'js/mustache.min.js' %}"></script>
+</head>
+<body>
+<audio id="audioPlayback">
+      <source class="track" id="audioSource" type="audio/mp3" src="">
+    </audio>
+<div class="preLoader">
+	<span><img src="{% static 'images/loaderImg.jpeg' %}"></span>
+</div>
+<span class="pagBg"></span>
+<div class="wrapper">
+<div class="header">
+	<a href="javascript:;" class="cLogo"><img src="{% static 'images/logo.png' %}"></a>
+	<ul class="headerRightSec">
+		<li>
+            <!--<div class="form-group selectLangGrp ">-->
+                <!--<div class="divInputIcon selectDiv">-->
+                <!--<select class="form-control selectLang">-->
+                    <!--<option value="fr">French</option>-->
+                    <!--<option value="es">Spanish</option>-->
+                    <!--<option value="pt">Portuguese</option>-->
+                    <!--<option value="de">German</option>-->
+                    <!--<option value="en" selected>English</option>-->
+                <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+			<input type="hidden" class="selectValHidden" name="selectLang">
+            <div id="google_translate_element"></div>
+        </li>
+
+		<li class="time_widget">
+			<span><i>21</i> <i>01</i></span>
+			<p>Good Afternoon </p>
+		</li>
+		<li class="weather_widget">
+			<span class="ion-icon">48°F</span>
+			<p class="currLoc">Mumbai</p>
+		</li>
+		<li class="notificationInfo">
+
+		</li>
+	</ul>
+	<div class="profileDiv">
+		<a href="javascript:void(0);" id="username"> </a>
+		<div class="profileContent">
+			<form action="/helpdesk/login" id="logoutbtn" method="POST" class="form-login">
+			{% csrf_token %}
+			<button type="submit" class="btn btnLogout">Logout</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!--header ends here-->
+<div class="pgContent pgBotContent">
+	<div class="container-fluid">
+		<div class="botContainer">
+			 <div class="botHeader">
+				<span class="botImg"><img src="{% static 'images/chatlogo.png' %}"></span> Hi, I am Fizzy, your Virtual Thirst Buster
+				<span class="iconVoice iconVoiceBan"><img src="{% static 'images/speaker.svg' %}"></span>
+			</div>
+			
+			<div class="botContent">
+				{% csrf_token %}
+				<div class="chatContent" id="chatContent"></div>
+				<!--chat content ends-->
+			</div> 
+			<!--bot content ends-->
+			<div class="botFooter">
+				<div class="suggestions">
+					<div class="suggestionsList sliderContainer">
+						<div class="sliderDiv">
+							<!--<span >FAQ</span>-->
+							<span data-val="Reset SAP Password">Reset SAP Password</span>
+							<span data-val="Unlock SAP Account">Unlock SAP Account</span>
+							<button type="button" class= "start-record-btn" id="start-record-btn" title="Start Recording">Speak</button>
+							<button type="button" class= "pause-record-btn" id="pause-record-btn" title="Pause Recording">Stop</button>
+
+							<!--<span >Tasks finished with errors </span>
+							<span >Untriggered Tasks</span>
+							<!--<span >Check Therapy File</span>-->
+						</div>
+					</div>
+				</div>
+				<div class="enterChat">
+					<input type="text" class="form-control chatInput" name="chatInput" id="chatInput" placeholder="Tell me how can I help you..."/>
+					<span class="btnEnterUserChat"></span>
+
+					<p class="placeholderText">Tell me how can I help you...</p>
+				</div>
+			</div>
+			<!--bot footer ends-->
+			<canvas id="canvas"></canvas>
+
+		</div>
+		<!--bot container-->
+		<div class="rightFeeds">
+			<div class="rightFeedHeader">
+                <span class="btnFeeds"></span>
+                <h2>Insights</h2>
+            </div>
+			<div class="feedsList" id="feedsList">
+				<div class="box feedBox feedBox1">
+					<div class="feedBoxContent">
+						<div class="feedBoxFront">
+							<h4>Useful Links</h4>
+							<div class="cTaskList">
+
+								<div class="cTBody">
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Security</td>
+										</tr>
+										<tr>
+											<td>Buying Desk</td>
+										</tr>
+										<tr>
+											<td>Keep Data Safe</td>
+										</tr>
+										<tr>
+											<td>People Services</td>
+										</tr>
+                                        <tr>
+											<td>Employee Assistance Program</td>
+										</tr>
+									</tbody>
+								</table>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!--feedBox 1 ends -->
+				<div class="box feedBox feedBox2">
+					<div class="feedBoxContent">
+						<div class="feedBoxFront">
+							<h4>Graph</h4>
+							<img src="{% static 'images/graph.png' %}">
+
+						</div>
+					</div>
+				</div>
+				<!--feedBox 2 ends-->
+			</div>
+		</div>
+		<!--top feed ends-->
+	</div>
+</div>
+<!--page content ends here-->
+</div>
+
+
+<script type="text/template" id="temp_usermsg">
+	<div class="chatMsg userMsg">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<div class="text">{% templatetag openvariable %}{textMsg}{% templatetag closevariable %}</div>
+			</div>
+			<p class="pTime">20:57</p>
+		</div>
+	</div>
+</script>
+<!--usernormal text ends-->
+
+<script type="text/template" id="temp_botText">
+	<div class="chatMsg botMsg">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<span class="botImg">
+					<img src="{% static 'images/botIcon_static.png' %}">
+				</span>
+				<div class="text">{% templatetag openvariable %}{textMsg}{% templatetag closevariable %}</div>
+			</div>
+			<p class="pTime">20:57</p>
+		</div>
+	</div>
+</script>
+<!--bot normal text ends-->
+<script type="text/template" id="temp_botTextActions">
+	<div class="chatMsg botMsg">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<span class="botImg">
+					<img src="{% static 'images/botIcon_static.png' %}">
+				</span>
+				<div class="text">{% templatetag openvariable %}{textMsg}{% templatetag closevariable %}</div>
+			</div>
+			<p class="pTime">20:57</p>
+			<div class="cActionBtns">
+				<span class="cBtnEdit"></span>
+				<span class="cBtnConfirm"></span>
+			</div>
+		</div>
+	</div>
+</script>
+<!--bot msg with action btns ends-->
+
+
+<script type="text/template" id="temp_feedSuggestions">
+{% templatetag openvariable %} #data {% templatetag closevariable %}
+<div class="box feedBox">
+	<div class="feedBoxFront" style="display:none;">
+		<div class="feedBoxFrontContent">
+			<h4>{{title}}</h4>
+			<h5>{{description}}</h5>
+		</div>
+	</div>
+	<div class="feedBoxBack">
+		<div class="feedBoxBackContent">
+			<h4>{{title}}</h4>
+			<h5>{{description}}</h5>
+		</div>
+	</div>
+</div>
+{% templatetag openvariable %} /data {% templatetag closevariable %}
+</script>
+<!--feed suggestion ends-->
+
+<script type="text/template" id="temp_giveratings">
+<div class="chatMsg botMsg chatRatings">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="{% static 'images/botIcon_static.png' %}">
+			</span>
+			<div class="text">
+				<p>Rate your experience</p>
+				<div class="divStars">
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+				</div>
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div>
+</script>
+<!--show rating-->
+<script type="text/template" id="temp_kayasmiles">
+<div class="chatMsg botMsg botMsgHCard chatMsgHasSuggestions">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="{% static 'images/botIcon_static.png' %}">
+			</span>
+			<div class="text">
+				<div class="ksImg w50">
+					<img src="{% static 'images/kaya_smiley.png' %}">
+				</div>
+				<div class="ksText w50">
+					<p>Introducing Kaya Smiles, an exclusive loyalty program, designed to make your journey to beautiful skin as rewarding as possible.</p>
+					<p>There are <strong>3 tiers</strong> in this program - <strong>Platinum, Gold Elite, Gold.</strong> Platinum is the highest tier in the program. The eligibility for each tier depends on the amount of money spent at Kaya over a 12 month period.</p>
+				</div>
+			</div>
+		</div>
+		<div class="suggestions">
+			<div class="suggestionsList">
+				<span>About Kaya Smiles</span>
+				<span>Smile Calculator</span>
+				<span>Loyality Offers</span>
+				<span>Exclusive Offers</span>
+			</div>
+			<p class="pTime">20:57</p>
+		</div>
+	</div>
+</div>
+</script>
+<!--show kayasmiles template ends-->
+<script type="text/template" id="temp_chatinProducts">
+<div class="chatMsg botMsg chatProductCards">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="{% static 'images/botIcon_static.png' %}">
+			</span>
+			<div class="text">
+				<div class="pCard">
+					<div class="pCardHeading">
+						<h5>Intense Clarity System</h5>
+						<h6>Combination, Dry & Normal Skin</h6>
+					</div>
+					<div class="pCardImg">
+					</div>
+					<p class="pPrice">your price <span>₹1940.00</span></p>
+					<div class="pCardFooter">
+						<button type="button" class="btn btnPrimaryOutline">Buy</button>
+						<button type="button" class="btn btnPrimaryOutline">Add to Cart</button>
+					</div>
+				</div>
+				<div class="pCard">
+					<div class="pCardHeading">
+						<h5>Complexion Perfector</h5>
+						<h6>All Skin Type</h6>
+					</div>
+					<div class="pCardImg">
+					</div>
+					<p class="pPrice">your price <span>₹950.00</span></p>
+					<div class="pCardFooter">
+						<button type="button" class="btn btnPrimaryOutline">Buy</button>
+						<button type="button" class="btn btnPrimaryOutline">Add to Cart</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div>
+</script>
+<!--show chatinProducts template ends-->
+<script type="text/template" id="temp_chatProductDescription">
+<div class="chatMsg botMsg botMsgHCard chatMsgHasSuggestions">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="{% static 'images/botIcon_static.png' %}">
+			</span>
+			<div class="text">
+				<div class="ksImg">
+					<img src="{% static 'images/gift.png' %}">
+				</div>
+				<div class="ksText">
+					<h5>REFER A FRIEND</h5>
+					<p>Enjoy <span class="tHighLight">500</span> smile balance when a friend shops and we'll give them <span class="tHighLight">20%</span> off their order.</p>
+				</div>
+			</div>
+		</div>
+		<p class="pTime">20:57</p>
+	</div>
+</div>
+</script>
+
+
+
+<script type="text/template" id="temp_nbContent">
+ <div class="chatMsg botSuggestions">
+	 <div class="chatMsgContainer">
+	<div class="text">
+		<div class="suggestionsList subMenuBtns">
+			{% templatetag openvariable %} #textMsg {% templatetag closevariable %}
+			{% templatetag openvariable %} #data {% templatetag closevariable %}
+			{% templatetag openvariable %}# data{% templatetag closevariable %}
+			<span>{% templatetag openvariable %}name{% templatetag closevariable %}</span>
+			{% templatetag openvariable %} /data{% templatetag closevariable %}
+			{% templatetag openvariable %} /data{% templatetag closevariable %}
+			{% templatetag openvariable %} /textMsg {% templatetag closevariable %}
+		</div>
+	</div>
+	</div>
+</div>
+</script>
+
+
+<!--show chatProductDescription template ends-->
+<script type="text/template" id="temp_weekend">
+<div class="chatMsg botMsg chatMsgHasSuggestions">
+	<div class="chatMsgContainer">
+		<div class="chatMsgDiv">
+			<span class="botImg">
+				<img src="/static/images/botIcon_static.png">
+			</span>
+			<div class="text">
+				I recommend you choose a weekday and earn extra <span class="kSmileText">50 Kaya Smiles</span>
+				<br>
+				Would you want to book a weekend slot instead?
+			</div>
+		</div>
+		<div class="suggestions">
+			<div class="suggestionsList">
+				<span class="bYes">Yes</span>
+				<span class="bNo">No</span>
+			</div>
+			<p class="pTime">20:57</p>
+		</div>
+	</div>
+</div>
+</script>
+<!--show weekend template ends-->
+<script type="text/template" id="temp_scheduleTask">
+	<div class="chatMsg botMsg scheduleTaskCalendar">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<span class="botImg">
+					<img src="{% static 'images/botIcon_static.png' %}">
+				</span>
+				<div class="text">
+					<h4>Tasks scheduled at <span class="taskDate"></span></h4>
+					<ul>
+						<li>Imagine STP</li>
+						<li>Collateral</li>
+						<li>Data Lake</li>
+						<li>Ops portal</li>
+					</ul>
+				</div>
+			</div>
+			<p class="pTime">20:57</p>
+			<!--<div class="cActionBtns">
+				<span class="cBtnEdit"></span>
+				<span class="cBtnConfirm"></span>
+			</div>-->
+		</div>
+	</div>
+</script>
+<!--bot msg for schedule task ends-->
+<script type="text/template" id="temp_table">
+	<div class="chatMsg botMsg scheduleTask">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<span class="botImg">
+					<img src="{% static 'images/botIcon_static.png' %}">
+				</span>
+				<div class="text">
+					<input type="hidden" class="taskType">
+					<!--<h4>{% templatetag openvariable %}{type}{% templatetag closevariable %}</h4>-->
+					<h4>Please check the below information:</h4>
+					<div class="botTableContainer btGraphLinkTC">
+						<table class="table table-bordered table-hover" >
+							<thead>
+								<tr>
+									<th>Task Id</th>
+									<th>Task name</th>
+									<th>Execution Time</th>
+									<th>Error Count</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								{% templatetag openvariable %} #textMsg {% templatetag closevariable %}
+								{% templatetag openvariable %} #data {% templatetag closevariable %}
+								{% templatetag openvariable %} #data {% templatetag closevariable %}
+								<tr>
+									<td>{% templatetag openvariable %}{Task ID}{% templatetag closevariable %}</td>
+									<td><a href="javascript:void(0);">{% templatetag openvariable %}{External Ref}{% templatetag closevariable %}</a></td>
+									<td>{% templatetag openvariable %}{Execution Time}{% templatetag closevariable %}</td>
+									<td>{% templatetag openvariable %}{Error Count}{% templatetag closevariable %}</td>
+								</tr>
+								{% templatetag openvariable %}/data{% templatetag closevariable %}
+								{% templatetag openvariable %}/data{% templatetag closevariable %}
+								{% templatetag openvariable %}/textMsg{% templatetag closevariable %}
+							</tbody>
+						</table>
+					</div>
+					<!--<div class="botGraphContainer">-->
+						<!--<h5>Task Duration</h5>-->
+						<!--<div class="graphContainer">-->
+							<!--<div class="graphContent" style="width:100%; height: 350px;"></div>-->
+						<!--</div>-->
+					<!--</div>-->
+				</div>
+			</div>
+			<p class="pTime">20:57</p>
+			<!--<div class="cActionBtns">
+				<span class="cBtnEdit"></span>
+				<span class="cBtnConfirm"></span>
+			</div>-->
+		</div>
+	</div>
+</script>
+<!--table div-->
+<script type="text/template" id="temp_graph">
+	<div class="chatMsg botMsg scheduleTask">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<span class="botImg">
+					<img src="{% static 'images/botIcon_static.png' %}">
+				</span>
+				<div class="text">
+					<div class="botGraphContainer">
+						<h5>Here are your insights on the Task Duration:</h5>
+						<div class="graphContainer">
+							<div class="graphContent" style="width:100%; min-width:320px; height: 300px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="pTime">20:57</p>
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="temp_downloadBtns">
+ <div class="chatMsg botMsg botSuggestions">
+	 <div class="chatMsgContainer">
+		 <div class="chatMsgDiv">
+			 <span class="botImg">
+					<img src="{% static 'images/botIcon_static.png' %}">
+			 </span>
+			<div class="text">
+				<div class="suggestionsList">
+					{% templatetag openvariable %}#data{% templatetag closevariable %}
+					<div class="btnAttachment" data-src="{% templatetag openvariable %} data_link {% templatetag closevariable %}" data-type="{% templatetag openvariable %}type_data{% templatetag closevariable %}"> <i>{% templatetag openvariable %}name{% templatetag closevariable %}</i> <a href="{% templatetag openvariable %}data_link{% templatetag closevariable %}">Download</a></div>
+					{% templatetag openvariable %} /data{% templatetag closevariable %}
+				</div>
+			</div>
+		 </div>
+	 </div>
+</div>
+</script>
+
+
+<!--table div-->
+<script type="text/template" id="temp_status">
+	<div class="chatMsg botMsg statusTask">
+		<div class="chatMsgContainer">
+			<div class="chatMsgDiv">
+				<span class="botImg">
+					<img src="{% static 'images/botIcon_static.png' %}">
+				</span>
+				 {% templatetag openvariable %} #textMsg {% templatetag closevariable %}
+				<div class="text {% templatetag openvariable %}{new_value}{% templatetag closevariable %}">
+
+					<div class="statusContainer">
+						<div class="statusImg">
+							<span><img src="/static/images/{% templatetag openvariable %}{new_value}{% templatetag closevariable %}.png"></span>
+							{% templatetag openvariable %} #response {% templatetag closevariable %}
+							{% templatetag openvariable %} #data {% templatetag closevariable %}
+							<h5>{% templatetag openvariable %}{Status}{% templatetag closevariable %}</h5>
+							{% templatetag openvariable %} /data {% templatetag closevariable %}
+							{% templatetag openvariable %} /response {% templatetag closevariable %}
+						</div>
+						<div class="statusText">
+							{% templatetag openvariable %} #response {% templatetag closevariable %}
+							{% templatetag openvariable %} #data {% templatetag closevariable %}
+							<div class="sRow">
+							<p>Task Id: <span>{% templatetag openvariable %}{Task ID}{% templatetag closevariable %}</span></p>
+							<p>Task Name: <span>{% templatetag openvariable %}{External Ref}{% templatetag closevariable %}</span></p>
+							</div>
+								<p>Execution Time: <span>{% templatetag openvariable %}{Execution Time}{% templatetag closevariable %}</span></p>
+							<p>Error Count: <span>{% templatetag openvariable %}{Error Count}{% templatetag closevariable %}</span></p>
+							{% templatetag openvariable %} /data {% templatetag closevariable %}
+							{% templatetag openvariable %} /response {% templatetag closevariable %}
+							<a href="javascript:void(0);">View details</a>
+						</div>
+					</div>
+
+				</div>
+				{% templatetag openvariable %}/textMsg{% templatetag closevariable %}
+			</div>
+
+			<p class="pTime">20:57</p>
+		</div>
+	</div>
+</script>
+<!--table div-->
+<script type="text/javascript">
+
+/*function googleTranslateElementInit() {
+   new google.translate.TranslateElement({
+       defaultLanguage: 'de'
+    }, 'google_translate_element');
+}*/
+</script>
+<script src="{% static 'js/app.js' %}"></script>
+
+<script src="{% static 'js/highcharts.js' %}"></script>
+<script src="{% static 'js/data.js' %}"></script>
+<script src="{% static 'js/drilldown.js' %}"></script>
+<script src="{% static 'js/annyang.min.js' %}"></script>
+<script src="{% static 'js/speechkitt.min.js' %}"></script>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+
+<!--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+<!--script specific to home page starts-->
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+var ww = $(window).width();
+var wh = $(window).height();
+$(document).ready(function(){
+	if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i) || (ww < 800)){
+		$("body").addClass("not-desktop");
+		//$(".pgBotContent").addClass("pgBotCFeedClosed");
+		if(ww < 801){
+			$(".pgBotContent").addClass("pgBotCFeedClosed");
+			$(document).on("click",".botContainer,.header",function(e) {
+				$(".pgBotContent").addClass("pgBotCFeedClosed");
+			});
+		}
+	}
+	else
+	{
+
+		if(ww > 800){
+			$(".cTBody").mCustomScrollbar();
+		}
+	}
+	setTimeout(function() {
+		sliderInit();
+	}, 2000);
+	var options = {
+		templateId: '#temp_feedSuggestions',
+		msgContainerId: '#feedsList'
+	};
+
+	//showMustacheTemplateFeedsSuggestions(options);
+	$( ".bDatePicker" ).datepicker();
+
+	//load logged in user data
+	/*$.ajax({
+			url: '/authenticate/',
+			type: 'POST',
+			data: '',
+			success: function(response){
+			localStorage.setItem("firstname",response.firstname);
+			localStorage.setItem("initials",response.initials);
+			location.href="/homepageview/"
+			},
+			error:function(response){
+				console.log("response: " + response);
+			}
+		});
+		*/
+
+});
+
+// Create the chart
+function showGraph(taskType){
+$(".botGraphContainer").show();
+var $container = $(".botMsg:last-child .graphContent");
+var singleBar = [{
+      name: "Browsers",
+      colorByPoint: true,
+      data: [
+        {
+          name: "Task 1",
+          y: 62.74
+        },
+        {
+          name: "Task 2",
+          y: 10.57
+        },
+        {
+          name: "Task 3",
+          y: 7.23
+        },
+        {
+          name: "Task 4",
+          y: 5.58
+        },
+        {
+          name: "Task 5",
+          y: 9.5
+        }
+      ]
+    }]
+var multiBar = [{
+        name: 'Task 1',
+        data: [49.9, 71.5, 106.4, 129.2, 144.0]
+
+    }, {
+        name: 'Avg Task 1',
+        data: [83.6, 78.8, 98.5, 93.4, 106.0]
+
+    }]
+ var barType;
+ if(taskType == "Here are the successful tasks list you enquired for"){
+	barType = multiBar;
+ }
+ else if(taskType == "Here are the failed tasks list you enquired for"){
+	barType = multiBar;
+ }
+ else if(taskType == "Here are the tasks finished with errors list you enquired for"){
+	barType = multiBar;
+ }
+ else
+ {
+ 	barType = singleBar;
+ }
+Highcharts.chart({
+  chart: {
+    type: 'column',
+    renderTo: $container[0]
+
+  },
+  title: {
+    text: ''
+  },
+
+  xAxis: {
+    type: 'category'
+  },
+  yAxis: {
+    title: {
+      text: 'Task Duration'
+    }
+
+  },
+  legend: {
+    enabled: false
+  },
+  plotOptions: {
+    series: {
+      borderWidth: 0,
+      dataLabels: {
+        enabled: true,
+        format: '{point.y:.1f}'
+      }
+    }
+  },
+
+  tooltip: {
+    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b> of total<br/>'
+  },
+
+  series: barType
+});
+}
+</script>
+
+<script>
+
+
+$(document).on('change','.goog-te-combo', function (e) {
+    var optionSelected = $(this).val();
+    $(this).closest("li").find(".selectValHidden").val(optionSelected);
+    //alert(optionSelected);
+	/*new google.translate.TranslateElement({
+       defaultLanguage: 'optionSelected'
+    }, 'google_translate_element');*/
+    $.ajax({
+			url: '/helpdesk/translate/',
+			type: 'POST',
+			data: {'optionSelected':optionSelected},
+			success: function(response){
+				console.log("success: " + response);
+				changePlaceHolderText();
+			},
+			error:function(response){
+				console.log("failure: " + response);
+			}
+	});
+});
+
+function changePlaceHolderText(){
+	setTimeout(function(){
+		var phText = $(".placeholderText").text();
+		$(".chatInput").attr("placeholder",phText);
+	},1000);
+
+}
+</script>
+</body>
+</html>

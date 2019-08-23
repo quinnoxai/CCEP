@@ -1,0 +1,68 @@
+{
+  "intents": [
+    {
+      "intent": "small_talk",
+      "patterns": [
+        "Hi",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "How are things?",
+        "Howdy!",
+        "hey",
+        "Yo!",
+        "Bye",
+        "See you later",
+        "Goodbye",
+        " good bye",
+        "sayonara",
+        "see you",
+        "byeee",
+        "ciao",
+        "hasta la vista",
+        "what can you do?",
+        "Hi I need help",
+        "what's new?",
+        "whats up?",
+        "what's new",
+        "how you hanging?",
+        "hi",
+        "how can you help me?"
+      ],
+      "responses": [
+        "Hello, thanks for visiting",
+        "Good to see you again",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "intent": "trial",
+      "patterns": [
+        "i want to reset my password",
+				"how do I reset my password?",
+				"reset my password",
+				"can you help me with resetting my password",
+				"help me to reset my password",
+				"reset my sap password",
+				"how do i reset my sap password?",
+				"can you help me with resetting my sap password",
+				"help me to reset my sap password",
+				"i want to reset my sap password",
+                "i want to unlock my account",
+				"how do I unlock my account?",
+				"unlock my account",
+				"can you help me with unlocking my account",
+				"help me to unlock my account",
+				"unlock my sap account",
+				"how do i unlock my sap account?",
+				"can you help me with unlocking my sap account",
+				"help me to unlock my sap account",
+				"i want to unlock my sap account",
+                "unlock account",
+                "reset password"
+      ]
+    }
+
+]
+}

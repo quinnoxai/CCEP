@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+	<meta http-equiv="cache-control" content="no-cache" />
+	<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon"/>
+    <title>Quinnox Conversational HR Helpdesk</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/ionicons.min.css' %}" rel="stylesheet">
+<style>
+.time_widget p span {display:none !important;}
+.preLoader {position: fixed;top: 0; left: 0;width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); display: flex; justify-content: center;align-items: center; z-index: 99;}
+/*.preLoader span {max-width: 160px; display: inline-block;width:160px;}
+.preLoader span img {width: 100%; height: auto; vertical-align: top;}*/
+.loadContent {width: 41.6667%; max-width: 800px; display: flex; justify-content: center; align-items: center; position: relative;perspective: 1000px;opacity: 0;animation: showCenterImg 1s linear;animation-fill-mode: forwards;}
+.loadContent > img {width: 100%; height: auto; vertical-align: top; position: relative; transform: scale(0);animation: showBackImg 0.5s ease-in-out 1s,animateBackImg 30s ease-in-out 1.5s infinite alternate,hideBackImg 0.5s ease-in-out 6s;animation-fill-mode: forwards;}
+.loadContent > span {width: 27.5%; display: inline-block; position: absolute; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0); z-index: 1; animation: flipCenterImg 0.5s linear 5s;animation-fill-mode: forwards;transform-style: preserve-3d; height: 0; padding-bottom: 40%;}
+.loadContent > span > img {width: 100%; height: auto; vertical-align: top; position: absolute; top: 0;left: 0;backface-visibility: hidden;}
+
+.loadContent > span > img.centerBack {transform:rotateY(180deg);animation:bounceBot 1s ease-in-out 6.5s infinite alternate; }
+/**will show loader center img**/
+@-webkit-keyframes showCenterImg {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes showCenterImg {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+/**will show loader backimg**/
+@-webkit-keyframes showBackImg {
+    0%   {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+@keyframes showBackImg {
+    0%   {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+/**will animate loader backimg**/
+@-webkit-keyframes animateBackImg {
+    0%   {transform: scale(1) rotate(0);}
+    100% {transform: scale(1) rotate(180deg);}
+}
+@keyframes animateBackImg {
+    0%   {transform: scale(1) rotate(0);}
+    100% {transform: scale(1) rotate(180deg);}
+}
+/**will flip loader centerImg**/
+@-webkit-keyframes flipCenterImg {
+    0%   {transform: translate3d(-50%,-50%,0) rotateY(0);}
+    100% {transform: translate3d(-50%,-50%,0) rotateY(180deg);}
+}
+@keyframes flipCenterImg {
+    0%   {transform: translate3d(-50%,-50%,0) rotateY(0);}
+    100% {transform: translate3d(-50%,-50%,0) rotateY(180deg);}
+}
+/**will hide loader backimg**/
+@-webkit-keyframes hideBackImg {
+    0%   {transform: scale(1);}
+    100% {transform: scale(0);}
+}
+@keyframes hideBackImg {
+    0%   {transform: scale(1);}
+    100% {transform: scale(0);}
+}
+/**will bounceBot**/
+@keyframes bounceBot {
+  from {
+    transform: translateY(0px) rotateY(180deg);
+  }
+  to {
+    transform: translateY(-15px) rotateY(180deg);
+  }
+}
+@-webkit-keyframes bounceBot {
+  from {
+    transform: translateY(0px) rotateY(180deg);
+  }
+  to {
+    transform: translateY(-15px) rotateY(180deg);
+  }
+}
+.btnOutlook {display:none;    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 2;
+}
+
+/**preloader ends**/
+</style>
+</head>
+<body>
+<div class="preLoader">
+	<div class="loadContent">
+		<img src="{% static 'images/loader/icons/iconsCluster.png'%}">
+		<span>
+			<img class="centerFront" src="{% static 'images/loader/icons/hrPerson.png' %}">
+			<img class="centerBack" src="{% static 'images/loader/icons/chatIconLoader.png'%}">
+		</span>
+		<a class="btn btnPrimary btnOutlook" href="{{sign_in_url}}" role="button" id="connect-button">Click here to Login</a>
+	</div>
+</div>
+<span class="pagBg"></span>
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script>
+$(window).on("load",function(){
+    $(".btnOutlook").delay(6000).fadeIn();
+});
+</script>
+</body>
+</html>

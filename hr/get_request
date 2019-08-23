@@ -1,0 +1,5 @@
+import requests
+from requests.auth import HTTPBasicAuth
+url = "https://api4.successfactors.com/odata/v2/EmpEmployment(personIdExternal='4575',userId='4575')/userNav?$format=json"
+data = requests.get(url,auth=HTTPBasicAuth('ODATAADMIN@quinnoxinc', '1234')).json()
+print(data)

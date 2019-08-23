@@ -1,0 +1,2 @@
+{% static "my_app/example.jpg" %}
+{% static '' %}

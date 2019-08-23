@@ -1,0 +1,17 @@
+﻿{
+  "status": "success",
+  "data": [
+    {
+      "title": "Your Ongoing Treatment",
+      "description": "Insta Skin Brilliance"
+    },
+    {
+      "title": "Product Best Suited for your Skin",
+      "description": "Sun Defence"
+    },
+    {
+      "title": "Your Dermatologist Recommends",
+      "description": "Aqua Therapy"
+    }
+  ]
+}

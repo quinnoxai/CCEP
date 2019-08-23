@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="cache-control" content="no-cache" />
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<title>HR Helpdesk</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/ionicons.min.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href="css/fonts.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<style>
+		.preLoader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.95);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 99;
+		}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 5s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+		.preLoader span {
+			max-width: 160px;
+			display: inline-block;
+			width: 160px;
+		}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 5s;
+}
+		.preLoader span img {
+			width: 100%;
+			height: auto;
+			vertical-align: top;
+		}
+		#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 70%;
+  max-width: 800px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+	</style>
+</head>
+<body>
+	<span id="textToSpeechBtn" class="invisibleDiv"></span>
+	<div class="preLoader">
+		<span><img src="images/logo.svg"></span>
+	</div>
+	<span class="pagBg"></span>
+	<div class="wrapper">
+		<div class="header">
+			<div class="container-fluid">
+				<a href="javascript:;" class="hLogo"><img src="images/logo.svg"></a>
+				<div class="widget">
+					<div class="time_widget">
+						<div id="time"></div>
+						<p>Good Afternoon, </span>John</span>!</p>
+					</div>
+					<div class="weather_widget"> <i class="icon ion-android-sunny"></i> <span id='temperature'></span>
+						<p class="currLoc">Houston</p>
+					</div>
+				</div>
+				<div class="profileDiv">
+					<a href="javascript:;"><span>MD</span></a>
+					<div class="profileContent">
+						<p><a href="javascript:;">My Profile</a></p>
+						<p><a href="javascript:;">Sign Out</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+		<div class="pgContent pgBotContent">
+			<div class="container-fluid">
+				<div class="topFeeds">
+					<span class="btnFeeds"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+					<div class="hScrollerDiv">
+						<div class="hScrollerDivContent feedsList" id="feedsList">
+
+
+						</div>
+					</div>
+				</div>
+				<!--top feed ends-->
+				<div class="botContainer">
+					<div class="botHeader">
+						<span class="botImg"><img src="images/chatlogo.png"></span> Ask Buddy, your Virtual Assistant
+						<span class="iconVoice"><p>Sound <i>On</i></p><img src="images/voiceIcon.svg"></span>
+					</div>
+
+					<div class="botContent">
+						<div class="chatContent" id="chatContent">
+
+						</div>
+						<!--chat content ends-->
+					</div>
+					<!--bot content ends-->
+					<div class="botFooter">
+						<div class="suggestions">
+							<h4>I guess you may want to view</h4>
+							<div class="hScrollerDiv">
+								<div class="hScrollerDivContent suggestionsList">
+					<span class="active">delivery apps</span>
+									<span>Leave Policy</span>
+									<span>Address Proof Letters</span>
+									<span>Mediclaim</span>
+									<span>Case Finder</span>
+									<!--<span>Ecards Related FAQs</span>-->
+									<!--<span>Member enrollment Related FAQs</span>-->
+									<!--<span>Family Floater Policy</span>-->
+									<!--<span>Claims Related FAQs</span>-->
+									<!--<a href="javascript:void(0);" data-toggle="modal" data-target="#contestModal">Selfie Contest</a>-->
+									<!--<a href="/rmail">Share Stories</a>-->
+									<!--<a href="javascript:void(0);" data-toggle="modal" data-target="#myModal">Share Stories</a>-->
+								</div>
+							</div>
+						</div>
+
+						<div class="enterChat">
+							<input type="text" class="form-control chatInput" name="chatInput" id="chatInput" autofocus placeholder="Say something..."
+							/>
+							<span class="btnEnterUserChat"><i class="icon ion-android-send" aria-hidden="true"></i></span>
+						</div>
+					</div>
+					<!--botfooter ends-->
+					
+					<!--bot news suggestions overlay ends-->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- Modal -->
+
+
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/modernizr-3.6.0.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/mustache.min.js"></script>
+	<script src="js/app.js"></script>
+	<script>
+		$(window).on("load", function () {
+			$(".preLoader").delay(2000).fadeOut(function () {
+				$("body").addClass("loaded");
+			});
+		});
+	</script>
+	<script type="text/template" id="temp_usermsg">
+		<div class="chatMsg userMsg">
+			<div class="text">{{ textMsg }}</div>
+
+		</div>
+	</script>
+	<!--usernormal text ends-->
+	<script type="text/template" id="temp_botText">
+		<div class="chatMsg botMsg">
+			<span class="botImg"><img src="images/chatlogo.png"></span>
+			<div class="text">{{{ textMsg }}}</div>
+			<!-- <div class="text">
+				<span class="loader"></span>
+			</div> -->
+		</div>
+	</script>
+	<script type="text/template" id="temp_botrating">
+		<div class="chatMsg botMsg">
+			<span class="botImg"><img src="images/chatlogo.png"></span>
+			<div class="text">
+				<fieldset class="rating">
+					<input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+					<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+					<input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+					<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+					<input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+					<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+					<input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+					<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+					<input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+					<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+				</fieldset>
+			</div>
+
+		</div>
+	</script>
+	<!--usernormal text ends-->
+	<script type="text/template" id="temp_nbContent">
+		<div class="chatMsg botSuggestions">
+			<div class="text">
+				<div class="suggestionsList">
+					<span>epod</span>
+					<span>digitization</span>
+					<span>routing</span>
+					<span>priviledge leave</span>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script type="text/template" id="temp_boxSuggestions">
+	<div class="chatMsg botReply">
+		<div class="replyContent">
+			<div class="box">
+				<span><img id="myImg" src="images/1.jpg"></img><span>
+				<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+			</div>
+			<div class="box">
+				<span><img src="images/1.jpg"></img></span>
+			
+			</div>
+			<div class="box">
+				<span><img src="images/1.jpg"></img></span>
+				
+			</div>
+			
+
+		</div>
+	</div>
+</script>
+<!--bot news suggestions ends-->
+
+
+	<script type="text/template" id="temp_nbContentTable">
+		<div class="chatMsg botSuggestions">
+			<div class="text br0">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>National/Fixed Holidays</th>
+							<th>Location</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{# data}}
+						<tr>
+							<td>{{date}}</td>
+							<td>{{holiday}}</td>
+							<td>{{location}}</td>
+						</tr>
+						{{ /data}}
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+		</div>
+	</script>
+
+
+	<!--bot suggestion ends-->
+	<script type="text/javascript">
+		$(window).on("load", function () {
+			setTimeout(function () {
+				showWelcomeBotMsg();
+			}, 2500);
+		});
+		$(document).ready(function () {
+			var username = localStorage.getItem("firstname");
+			if (username != null || username != "") {
+				$("h2 span").html(username);
+				$(".time_widget p span").html(username);
+			}
+		});
+		var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+	</script>
+</body>
+</html>

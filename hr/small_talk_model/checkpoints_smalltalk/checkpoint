@@ -1,0 +1,2 @@
+model_checkpoint_path: "E:\\final_calypso_bot_bk\\hr\\small_talk_model\\checkpoints_smalltalk\\smalltalk_model.ckpt-2000"
+all_model_checkpoint_paths: "E:\\final_calypso_bot_bk\\hr\\small_talk_model\\checkpoints_smalltalk\\smalltalk_model.ckpt-2000"

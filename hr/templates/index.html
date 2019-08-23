@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <title>WM Buddy - Humanised Employee Experience</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/ionicons.min.css" rel="stylesheet">
+	<link href="css/fonts.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="preLoader">
+	<span><img src="images/logo.svg"></span>
+</div>
+<div class="mapOverlay"><div class="mapContainer"><div class="map" id="map"></div></div></div>
+<span class="pagBg"></span>
+<div class="wrapper">
+<div class="header">
+	<div class="container-fluid">
+		<!-- <a href="javascript:;" class="hLogo"><img src="images/logo.svg"></a> -->
+		<div class="widget">
+			<div class="time_widget">
+				<div id="time"></div>
+				<p>Good Afternoon, John!</p>
+			</div>
+			<div class="weather_widget"> <i class="icon ion-android-sunny"></i> <span>48°F</span>
+				<p class="currLoc">Houston</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"> </div>
+<div class="pgContent">
+	<div class="container">
+		<h2>Hi Sunita</h2>
+		<p>Please tell me more about yourself for a personalized experience.</p>
+		<form class="formContent">
+			<div class="row">
+				<div class="col-sm-6 tagGrp">
+					<div class="form-group mGrp">
+						<input type="text" class="form-control interest" id="interest" name="interest" placeholder="Enter your interests" autocomplete="off">
+						<div class="inputActions">
+							<span class="btnAddInput" data-toggle="tooltip" title="You can add at the most 5 interest areas" data-placement="bottom"><i class="icon ion-android-add" aria-hidden="true"></i></span>
+						</div>
+					</div>
+					<div class="interest_list"></div>
+				</div>
+				<div class="col-sm-6 tagGrp">
+					<div class="form-group mGrp">
+						<input type="text" class="form-control location" id="location" name="location" placeholder="Add your location" autocomplete="off">
+						<div class="inputActions">
+							<span class="btnChangeLoc" data-toggle="tooltip" title="You can change your location on map" data-placement="bottom"><i class="icon ion-location" aria-hidden="true"></i></span>
+							<span class="btnAddInput"  data-toggle="tooltip" title="You can add at the most 5 location areas" data-placement="bottom"><i class="icon ion-android-add" aria-hidden="true"></i></span>
+						</div>
+					</div>
+					<div class="interest_list"></div>
+				</div>
+			</div>
+			<button type="button" class="btn btnPrimary btNext">Next</button>
+			<a href="javascript:;" class="logo"><img src="images/logo.svg"></a>
+		</form>
+	</div>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdAJeHcnhf-0lQywUpZAglBiXi2XU1zTw&callback=initMap"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    getCurrentCity();
+});
+function getCurrentCity() {
+    $.get("http://ipinfo.io", function (response) {
+        $("#location").val(response.region);
+    }, "jsonp");
+}
+$(document).on("click",".btnChangeLoc",function(){
+	$(".mapOverlay").fadeIn(function(){
+		initMap();
+	});
+	
+});
+      var map, infoWindow, geocoder, latlng, initMarkerLoc,updatedLatLng;
+	  
+	  initMarkerLoc = {lat: -25.344, lng: 131.036};
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: initMarkerLoc,
+          zoom: 16
+        });
+        infoWindow = new google.maps.InfoWindow;
+		var marker = new google.maps.Marker({position: initMarkerLoc, map: map,draggable: true});
+		geocoder = new google.maps.Geocoder();
+
+		google.maps.event.addListener(marker, 'dragend', function(ev){
+			//alert(initMarkerLoc.lat() + ' ' + initMarkerLoc.lng()); // always the same LatLng-Object...
+			// console.log("newlat: "+marker.getPosition().lat());
+			// console.log("newlat: "+marker.getPosition().lng());
+			var newLat = marker.getPosition().lat();
+			var newLng = marker.getPosition().lng();
+			codeLatLng(newLat, newLng);
+		});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+			if(!(jQuery.isEmptyObject(updatedLatLng))){
+				var initLat = updatedLatLng.lat;
+				var initLng = updatedLatLng.lng;
+			}
+			else
+			{
+				var initLat = position.coords.latitude;
+				var initLng = position.coords.longitude;
+			}
+			
+            var pos = {
+              lat: initLat,
+              lng: initLng
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+			marker.setPosition(pos);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+
+/**set City name**/
+  function codeLatLng(lat, lng) {
+	updatedLatLng = {"lat":lat,"lng":lng};
+    latlng = new google.maps.LatLng(lat, lng);
+    geocoder.geocode({'latLng': latlng}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+      //console.log(results[0].formatted_address);
+	  console.log(latlng.lat);
+        if (results[1]) {
+			var city;
+         //formatted address
+         //alert(results[0].formatted_address)
+        //find country name
+             for (var i=0; i<results[0].address_components.length; i++) {
+            for (var b=0;b<results[0].address_components[i].types.length;b++) {
+
+            //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
+                if (results[0].address_components[i].types[b] == "administrative_area_level_1") {
+                    //this is the object you are looking for
+                    city= results[0].address_components[i];
+                    break;
+                }
+            }
+        }
+		$(".mapOverlay").fadeOut();
+		$(".location").val(city.long_name);
+
+        } else {
+          alert("No results found");
+        }
+      } else {
+        alert("Geocoder failed due to: " + status);
+      }
+    });
+  }
+
+
+/** on submit btn**/
+$(document).on("click",".btNext",function(){
+	window.location.href = "home.html";
+});
+</script>
+<!--page specific script ends-->
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "intents": [
+    {    "intent": "greeting",
+"patterns": ["Hi", "Is anyone there?", "Hello", "Good day","Howdy!","hey","Yo!","Hi,How are you?","wassup?","what's new","good morning","howza","wassup buddy","how are you?"],
+"responses": ["Hello", "Good to see you again", "Hi there, how can I help?"]
+},
+{"intent": "goodbye",
+"patterns": ["Bye", "See you later", "Goodbye"," good bye","sayonara","see you","byeee","ciao","hasta la vista"],
+"responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+},
+{"intent": "thanks",
+"patterns": ["Thanks", "Thank you", "That's helpful","Thanks a lot","Thanks,bye","You were very helpful","I'm glad things worked out"],
+"responses": ["Happy to help!", "Any time!", "My pleasure"]
+}
+  ]
+}
+

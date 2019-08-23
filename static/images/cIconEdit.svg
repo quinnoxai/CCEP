@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d9531d;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="1" y="1" width="45" height="45" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="2" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-color="#0f0601" flood-opacity="0.3"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <circle id="Ellipse_3_copy" data-name="Ellipse 3 copy" class="cls-1" cx="25" cy="23" r="18"/>
+  <image id="_23930" data-name="23930" x="17" y="15" width="15" height="15" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAmUlEQVQokZ3SsQ3CMBCF4UdJlYZBKBkgYwUWoWYDizIdUTJBJOQNGIAm0o8i+SRjIXHOSVdYd99zYQvwdgMEYAEicKrBZ74repDdeARuGV88cErLryIgeOFcBFzWuQf2wCELCLbnhX06T2n+E7thiatgjquh4f0WaLjNHv7qhYa74tu5oOH7Frj2DnhKipIGSaOkh6S3/pWkD6CZwLEaJB7RAAAAAElFTkSuQmCC"/>
+</svg>

@@ -1,0 +1,2 @@
+model_checkpoint_path: "D:\\All_backup\\CCEP\\hr\\trial_model\\checkpoints_trial\\trial_model.ckpt-900"
+all_model_checkpoint_paths: "D:\\All_backup\\CCEP\\hr\\trial_model\\checkpoints_trial\\trial_model.ckpt-900"

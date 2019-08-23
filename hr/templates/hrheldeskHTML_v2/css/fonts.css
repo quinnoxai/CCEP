@@ -1,0 +1,94 @@
+
+
+@font-face {
+  font-family: 'MyriadPro-Bold';
+  src: url('../fonts/MyriadPro-Bold/MyriadPro-Bold.eot');
+  src: url('../fonts/MyriadPro-Bold/MyriadPro-Bold.woff2') format('woff2'),
+       url('../fonts/MyriadPro-Bold/MyriadPro-Bold.woff') format('woff'),
+       url('../fonts/MyriadPro-Bold/MyriadPro-Bold.ttf') format('truetype'),
+       url('../fonts/MyriadPro-Bold/MyriadPro-Bold.svg#MyriadPro-Bold') format('svg'),
+       url('../fonts/MyriadPro-Bold/MyriadPro-Bold.eot?#iefix') format('embedded-opentype');
+}
+
+
+
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: url('../fonts/MyriadPro-Regular/MyriadPro-Regular.eot');
+  src: url('../fonts/MyriadPro-Regular/MyriadPro-Regular.woff2') format('woff2'),
+       url('../fonts/MyriadPro-Regular/MyriadPro-Regular.woff') format('woff'),
+       url('../fonts/MyriadPro-Regular/MyriadPro-Regular.ttf') format('truetype'),
+       url('../fonts/MyriadPro-Regular/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg'),
+       url('../fonts/MyriadPro-Regular/MyriadPro-Regular.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'MyriadPro-SemiBold';
+  src: url('../fonts/MyriadPro-SemiBold/MyriadPro-SemiBold.eot'),
+       url('../fonts/MyriadPro-SemiBold/MyriadPro-SemiBold.woff') format('woff'),
+       url('../fonts/MyriadPro-SemiBold/MyriadPro-SemiBold.woff2') format('woff2'),
+       url('../fonts/MyriadPro-SemiBold/MyriadPro-SemiBold.ttf') format('truetype'),
+       url('../fonts/MyriadPro-SemiBold/MyriadPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MyriadPro-SemiBold/MyriadPro-SemiBold.svg#MyriadPro-Semibold') format('svg');
+}
+
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: 
+       url('../fonts/HelveticaNeue.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue_Thin';
+  src: 
+       url('../fonts/HelveticaNeue_Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue_Light';
+  src: 
+       url('../fonts/HelveticaNeue_Light.ttf') format('truetype');
+}
+
+/***opensans**/
+@font-face {
+  font-family: 'opensans-bold';
+  src: url('../fonts/opensans-bold/opensans-bold.eot');
+  src: url('../fonts/opensans-bold/opensans-bold.woff2') format('woff2'),
+       url('../fonts/opensans-bold/opensans-bold.woff') format('woff'),
+       url('../fonts/opensans-bold/opensans-bold.ttf') format('truetype'),
+       url('../fonts/opensans-bold/opensans-bold.svg#MyriadPro-Bold') format('svg'),
+       url('../fonts/opensans-bold/opensans-bold.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'opensans-light';
+  src: url('../fonts/opensans-light/opensans-light.eot');
+  src: url('../fonts/opensans-light/opensans-light.woff2') format('woff2'),
+       url('../fonts/opensans-light/opensans-light.woff') format('woff'),
+       url('../fonts/opensans-light/opensans-light.ttf') format('truetype'),
+       url('../fonts/opensans-light/opensans-light.svg#MyriadPro-Bold') format('svg'),
+       url('../fonts/opensans-light/opensans-light.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'opensans-regular';
+  src: url('../fonts/opensans-regular/opensans-regular.eot');
+  src: url('../fonts/opensans-regular/opensans-regular.woff2') format('woff2'),
+       url('../fonts/opensans-regular/opensans-regular.woff') format('woff'),
+       url('../fonts/opensans-regular/opensans-regular.ttf') format('truetype'),
+       url('../fonts/opensans-regular/opensans-regular.svg#MyriadPro-Bold') format('svg'),
+       url('../fonts/opensans-regular/opensans-regular.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'opensans-semibold';
+  src: url('../fonts/opensans-semibold/opensans-semibold.eot');
+  src: url('../fonts/opensans-semibold/opensans-semibold.woff2') format('woff2'),
+       url('../fonts/opensans-semibold/opensans-semibold.woff') format('woff'),
+       url('../fonts/opensans-semibold/opensans-semibold.ttf') format('truetype'),
+       url('../fonts/opensans-semibold/opensans-semibold.svg#MyriadPro-Bold') format('svg'),
+       url('../fonts/opensans-semibold/opensans-semibold.eot?#iefix') format('embedded-opentype');
+}
+

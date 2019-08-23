@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+        opacity: 0.1;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#333" flood-opacity="0.5"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <image id="image" width="36" height="36" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAC5klEQVRYhe2WT2jTcBTHf02yris9lW6y2NUanNqVbQ0O2WCrF5EpOkQY22FMpFJwsMIk4ChUcRevYm+F4kE6vFqGMKoI9eBlzE1y2MV1uFoPbm3R7k/1l0QeLFiWpkm3KTvkA4/3+/Pe48vraxITQohGxwjiOIlBhiAdGIK0MARpcWhBPM/fktc+n8+sCPifgjiOs3u93qewHh4eti4sLLyPRCLNisA6ONSTulwuv8rn829bW1ufwb5UKj23Wq0XCYLwKoJ1cuAOzc/PX2hoaPAxDBOVzwYHB+9JkiQkEokzigSdHLhDGOMPS0tLD3t6elKV52trawGXyxV2OBzt+XxeVCRqcKAOZTKZ2yRJnhgYGHgD+9nZ2XYwWLvd7rgoit/S6fRVRaJO6HqMYRiXIAjfE4mEX87b3t5+Bybv5+bmLkuS9Mvv95+utz6qclDTisXiS0EQfjY1NZ2E/eLi4ri0B6zl3K2trVShUIjXqqViqhcKm5mZYaE7kUikG/Ysy57CGH+WBcEazuCuv7+fEUXxdzwe76tWS83qGupyuZykKMpts9m6d3Z2pPX19aDT6XxUGZPNZh+3tbXF0N6A0zR902w231AUU0H3UKfT6T6SJJs5jrsEYsLhsIOm6fv74+AM7tDegFMU5eF5/rqiYA1U21dpGOMvGOOv8uwUCoUXkgpwJ+cmk8krgiDk7Ha7s1rd/Uap6/zL6urqHUEQshzH3YXu0DRNbmxsfNzc3PykCEYIwcMRYnK5nDA0NMRjjKmVlZUHLS0tTxTB+9A1Q6lUik0mk5loNFpUXOqgt7fX3NXVZYnFYj+O7CeTbWRk5Cz4sbGxc+CDweB58BMTEx7wk5OTHeCnpqa81fKP9F+2u7v7urGxsVOSpJLJZLLp8ZC3vLwcYlk2pShYhbpeHRaL5dr09LSPIAhPKBTqrPSBQKCj0o+OjnrAg+kVgw77+fEvML6ptTAEaWEI0sIQpIUhqCYIoT/bQ1bqgmyAIgAAAABJRU5ErkJggg=="/>
+  </defs>
+  <path id="Solid_copy" data-name="Solid copy" class="cls-1" d="M0,0H40V40H0V0ZM2,2H38V38H2V2Z"/>
+  <g id="On_Trans" data-name="On Trans">
+    <use x="2" y="2" xlink:href="#image"/>
+  </g>
+  <path id="Solid_copy-2" data-name="Solid copy" class="cls-1" d="M0,0H40V40H0V0ZM2,2H38V38H2V2Z"/>
+  <g id="On_Trans-2" data-name="On Trans">
+    <use x="2" y="2" xlink:href="#image"/>
+  </g>
+  <path id="Solid_copy-3" data-name="Solid copy" class="cls-1" d="M0,0H40V40H0V0ZM2,2H38V38H2V2Z"/>
+  <g id="On_Trans-3" data-name="On Trans">
+    <use x="2" y="2" xlink:href="#image"/>
+  </g>
+  <path id="Solid_copy-4" data-name="Solid copy" class="cls-1" d="M0,0H40V40H0V0ZM2,2H38V38H2V2Z"/>
+  <g id="On_Trans-4" data-name="On Trans">
+    <use x="2" y="2" xlink:href="#image"/>
+  </g>
+  <path id="Solid_copy-5" data-name="Solid copy" class="cls-1" d="M0,0H40V40H0V0ZM2,2H38V38H2V2Z"/>
+  <g id="On_Trans-5" data-name="On Trans">
+    <use x="2" y="2" xlink:href="#image"/>
+  </g>
+</svg>

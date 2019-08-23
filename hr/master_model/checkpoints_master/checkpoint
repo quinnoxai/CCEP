@@ -1,0 +1,2 @@
+model_checkpoint_path: "D:\\All_backup\\CCEP\\hr\\master_model\\checkpoints_master\\master_model.ckpt-1800"
+all_model_checkpoint_paths: "D:\\All_backup\\CCEP\\hr\\master_model\\checkpoints_master\\master_model.ckpt-1800"
